@@ -1,25 +1,31 @@
 Commands:
 	Aliases: /g, /guilds, /guild
 	/g:
-		- 
+		- Shows the information about the Guild they're currently in, and if they're 
+		  not in a guild, it shows them command help saying to find a guild.
 	/g help [<page no>]:
-		-
+		- Shows the help page. (While plugin in development, make it so that they're all printed instead of multiple pages)
+	/g list [<page no>]:
+		- Shows a list of all of the guilds. (While plugin in development, make it so that they're all printed instead of multiple pages)
 	/g create <guild>:
-		-
-	/g info [<guild>]:
-		-
+		- Creates a guild and sends message sending information about that guild.
+	/g info [<guild | player>]:
+		- Shows the information about your guild, or the information about a guild that's typed.
+			- Guild Name, Coins, Leader, Members, Chunks Claimed, Start Date, End Date (if archived).
+		- Shows information about a player that is typed into the second argument.
+			- Guild they're in, 
 	/g leader:
 		- Leader only commands
 			/g leader delete:
-				-
+				- 
 			/g leader invite <player>:
-				-
+				- 
 			/g leader kick <player>:
-				-
+				- 
 			/g leader trust <guild>:
-				-
+				- 
 			/g ledaer attack <guild>:
-				-
+				- 
 	/g claim:
 		-
 	/g unclaim:
