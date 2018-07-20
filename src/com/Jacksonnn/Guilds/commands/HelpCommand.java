@@ -8,7 +8,7 @@ import java.util.List;
 public class HelpCommand extends GuildsCommand {
 
     public HelpCommand() {
-        super("help", "/guilds help <page>", ConfigManager.languageConfig.get().getString("Commands.Help.Description"), new String[] { "?", "h" });
+        super("help", "/guilds help <page>", ConfigManager.languageConfig.get().getString("Commands.Help.Description"), new String[] { "?", "h", "help" });
     }
 
     public void execute(CommandSender sender, List<String> args) {

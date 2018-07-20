@@ -7,7 +7,7 @@ import java.util.List;
 
 public class InviteCommand extends GuildsCommand {
     public InviteCommand() {
-        super("invite", "/guilds invite <player>", ConfigManager.languageConfig.get().getString("Commands.Invite.Description"), new String[] { "i" });
+        super("invite", "/guilds invite <player>", ConfigManager.languageConfig.get().getString("Commands.Invite.Description"), new String[] { "invite" });
     }
 
     public void execute(CommandSender sender, List<String> args) {

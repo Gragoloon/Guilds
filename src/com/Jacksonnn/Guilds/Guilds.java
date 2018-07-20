@@ -19,18 +19,18 @@ public class Guilds extends JavaPlugin {
 	public void onEnable() {
 		plugin = this;
 		Guilds.log = this.getLogger();
-		new ConfigManager();
-		new Commands(this);
+        new ConfigManager();
 		DBConnection.host = getConfig().getString("Storage.MySQL.host");
 		DBConnection.port = getConfig().getInt("Storage.MySQL.port");
 		DBConnection.pass = getConfig().getString("Storage.MySQL.pass");
 		DBConnection.db = getConfig().getString("Storage.MySQL.db");
 		DBConnection.user = getConfig().getString("Storage.MySQL.user");
 		DBConnection.init();
-		if (DBConnection.isOpen() == false) {
+		if (!DBConnection.isOpen()) {
 			// Message is logged by DBConnection
 			return;
 		}
+        new Commands(plugin);
 		Bukkit.getServer().getLogger().info(ChatColor.DARK_GREEN + "[Guilds] Guilds has sucessfully been enabled!");
 	}
 	

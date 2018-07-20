@@ -1,6 +1,7 @@
 package com.Jacksonnn.Guilds.commands;
 
 import com.Jacksonnn.Guilds.Guilds;
+import org.bukkit.Bukkit;
 import org.bukkit.command.Command;
 import org.bukkit.command.CommandExecutor;
 import org.bukkit.command.CommandSender;
@@ -39,7 +40,7 @@ public class Commands {
         CommandExecutor exe = new CommandExecutor() {
             @Override
             public boolean onCommand(CommandSender s, Command c, String label, String[] args) {
-                List<String> sendingArgs = Arrays.asList(args).subList(1, args.length);
+                List<String> sendingArgs = Arrays.asList(args).subList(0, args.length);
                 for (GuildsCommand command : GuildsCommand.instances.values()) {
                     if (Arrays.asList(command.getAliases()).contains(args[0].toLowerCase())) {
                         command.execute(s, sendingArgs);
@@ -51,5 +52,6 @@ public class Commands {
             }
         };
         Guilds.setExecutor(exe);
+        Bukkit.getServer().getLogger().info("Commands have been enabled!");
     }
 }

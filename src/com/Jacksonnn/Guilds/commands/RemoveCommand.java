@@ -7,7 +7,7 @@ import java.util.List;
 
 public class RemoveCommand extends GuildsCommand {
     public RemoveCommand() {
-        super("remove", "/guilds remove <guild>", ConfigManager.languageConfig.get().getString("Commands.Remove.Description"), new String[] { "r" });
+        super("remove", "/guilds remove <guild>", ConfigManager.languageConfig.get().getString("Commands.Remove.Description"), new String[] { "r", "remove" });
     }
 
     public void execute(CommandSender sender, List<String> args) {

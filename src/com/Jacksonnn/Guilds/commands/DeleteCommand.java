@@ -7,7 +7,7 @@ import java.util.List;
 
 public class DeleteCommand extends GuildsCommand {
     public DeleteCommand() {
-        super("delete", "/guilds delete <name>", ConfigManager.languageConfig.get().getString("Commands.Delete.Description"), new String[] { "d" });
+        super("delete", "/guilds delete <name>", ConfigManager.languageConfig.get().getString("Commands.Delete.Description"), new String[] { "d", "delete" });
     }
 
     public void execute(CommandSender sender, List<String> args) {

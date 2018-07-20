@@ -7,7 +7,7 @@ import java.util.List;
 
 public class TrustCommand extends GuildsCommand {
     public TrustCommand() {
-        super("trust", "/guilds trust <guild>", ConfigManager.languageConfig.get().getString("Commands.Trust.Description"), new String[] { "t", "ally" });
+        super("trust", "/guilds trust <guild>", ConfigManager.languageConfig.get().getString("Commands.Trust.Description"), new String[] { "t", "ally", "trust" });
     }
 
     public void execute(CommandSender sender, List<String> args) {
