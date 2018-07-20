@@ -48,7 +48,7 @@ public class DBConnection {
 
 			if (!sql.tableExists("guilds_guilds")) {
 				Guilds.log.info("Creating guilds_guilds table");
-				String query = "CREATE TABLE `guilds_guilds` (" + "`id` INTEGER NOT NULL," + "`leader` varchar(255) NOT NULL," + "`name` varchar(255)," + "`members` varchar(255)," + "`chunks_claimed` varchar(255)," + "`coins` varchar(255)," + "`apprentices` varchar(255)," + "`trusted` varchar(255)," + "`sdate` varchar(255)," + "`edate` varchar(255)" + " PRIMARY KEY (id));";
+				String query = "CREATE TABLE `guilds_guilds` (" + "`id` INTEGER NOT NULL," + "`leader` varchar(255) NOT NULL," + "`name` varchar(255)," + "`members` varchar(255)," + "`chunks_claimed` varchar(255)," + "`coins` varchar(255)," + "`apprentices` varchar(255)," + "`trusted` varchar(255)," + "`sdate` varchar(255)," + "`edate` varchar(255)," + " PRIMARY KEY (id));";
 				sql.modifyQuery(query, false);
 			}
 
@@ -70,7 +70,7 @@ public class DBConnection {
 
 			if (!sql.tableExists("guilds_guilds")) {
 				Guilds.log.info("Creating guilds_guilds table");
-				String query = "CREATE TABLE `guilds_guilds` (" + "`id` INTEGER NOT NULL," + "`leader` varchar(255) NOT NULL," + "`name` varchar(255)," + "`members` varchar(255)," + "`chunks_claimed` varchar(255)," + "`coins` varchar(255)," + "`apprentices` varchar(255)," + "`trusted` varchar(255)," + "`sdate` varchar(255)," + "`edate` varchar(255)" + " PRIMARY KEY (id));";
+				String query = "CREATE TABLE `guilds_guilds` (" + "`id` INTEGER NOT NULL," + "`leader` varchar(255) NOT NULL," + "`name` varchar(255)," + "`members` varchar(255)," + "`chunks_claimed` varchar(255)," + "`coins` varchar(255)," + "`apprentices` varchar(255)," + "`trusted` varchar(255)," + "`sdate` varchar(255)," + "`edate` varchar(255)," + " PRIMARY KEY (id));";
 				sql.modifyQuery(query, false);
 			}
 

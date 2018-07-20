@@ -20,7 +20,7 @@ public class CreateCommand extends GuildsCommand {
                 if (hasPermission(sender, "admin")) {
                     create(sender, args.get(0), args.get(1));
                 }
-        } else if (correctLength(sender, args.size(), 1, 1) && isPlayer(sender)) {
+        } else if (correctLength(sender, args.size(), 1, 1)) {
             if (isPlayer(sender)) {
                 if (hasPermission(sender)) {
                     create(sender, args.get(0), sender.getName());
@@ -35,11 +35,24 @@ public class CreateCommand extends GuildsCommand {
         Object scoins = ConfigManager.defaultConfig.get().get("Guilds.StarterOptions.startingCoins");
 
         DBConnection.sql.modifyQuery("INSERT INTO guilds_guilds (leader, name, members, coins, sdate) VALUES (" +
-                "`" + leader + "`" +
-                "`" + guildName + "`" +
-                "`" + leader + "`" +
-                "`" + ConfigManager.defaultConfig.get().get("Guilds.StarterOptions.startingCoins") + "`" +
-                "`" + getCurrentDate() + "`");
+                "'" + leader + "', " +
+                "'" + guildName + "', " +
+                "'" + leader + "', " +
+                "'" + ConfigManager.defaultConfig.get().get("Guilds.StarterOptions.startingCoins") + "', " +
+                "'" + getCurrentDate() + "')");
         sender.sendMessage(GeneralMethods.prefixSuccess + "Created the guild (" + guildName + "), with the leader " + leader + " and " + scoins + " coins on " + getCurrentDate() + ".");
+        return;
     }
 }
+
+/*
+DBConnection.sql.modifyQuery("INSERT INTO bounties (player, issuer, item, amount, startdate, enddate, assassin, status) VALUES ("
+				+ "'" + player + "', "
+				+ "'" + issuer + "', "
+				+ "'" + item + "', "
+				+ amount + ", "
+				+ "'" + getCurrentDate() + "', "
+				+ null + ", "
+				+ null + ", "
+				+ "'open')");
+ */
