@@ -1,5 +1,6 @@
 package com.Jacksonnn.Guilds.commands;
 
+import com.Jacksonnn.Guilds.GeneralMethods;
 import com.Jacksonnn.Guilds.configuration.ConfigManager;
 import org.bukkit.ChatColor;
 import org.bukkit.command.CommandSender;
@@ -15,6 +16,7 @@ public abstract class GuildsCommand implements SubCommand {
     private final String description;
     private final String[] aliases;
     private final String noPermissionMessage;
+    private final String mustBePlayer;
 
     public static Map<String, GuildsCommand> instances = new HashMap<>();
 
@@ -25,7 +27,7 @@ public abstract class GuildsCommand implements SubCommand {
         this.aliases = aliases;
 
         this.noPermissionMessage = ChatColor.RED + ConfigManager.languageConfig.get().getString("Commands.NoPermission");
-
+        this.mustBePlayer = ChatColor.RED + ConfigManager.languageConfig.get().getString("Commands.mustBePlayer");
 
         instances.put(name, this);
     }
@@ -47,7 +49,7 @@ public abstract class GuildsCommand implements SubCommand {
     }
 
     public void help(CommandSender sender, boolean description) {
-        sender.sendMessage(ChatColor.GOLD + "Proper Usage: " + ChatColor.DARK_AQUA + properUse);
+        GeneralMethods.sendMessage(sender, "error", "Proper Usage: " + properUse);
         if (description) {
             sender.sendMessage(ChatColor.YELLOW + this.description);
         }
@@ -57,6 +59,34 @@ public abstract class GuildsCommand implements SubCommand {
         if (sender.hasPermission("guilds.command." + name)) {
             return true;
         } else {
+            GeneralMethods.sendMessage(sender, "error", this.noPermissionMessage);
+            return false;
+        }
+    }
+
+    public boolean hasPermission(CommandSender sender, String extra) {
+        if (sender.hasPermission("guilds.command." + name + "." + extra)) {
+            return true;
+        } else {
+            GeneralMethods.sendMessage(sender, "error", this.noPermissionMessage);
+            return false;
+        }
+    }
+
+    public boolean correctLength(CommandSender sender, int size, int min, int max) {
+        if (size < min || size > max) {
+            help(sender, false);
+            return false;
+        } else {
+            return true;
+        }
+    }
+
+    public boolean isPlayer(CommandSender sender) {
+        if (sender instanceof Player) {
+            return true;
+        } else {
+            GeneralMethods.sendMessage(sender, "error", this.mustBePlayer);
             return false;
         }
     }

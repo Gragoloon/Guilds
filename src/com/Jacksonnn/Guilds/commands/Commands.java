@@ -1,7 +1,13 @@
 package com.Jacksonnn.Guilds.commands;
 
 import com.Jacksonnn.Guilds.Guilds;
+import org.bukkit.command.Command;
+import org.bukkit.command.CommandExecutor;
+import org.bukkit.command.CommandSender;
 import org.bukkit.command.PluginCommand;
+
+import java.util.Arrays;
+import java.util.List;
 
 public class Commands {
     private Guilds plugin;
@@ -29,5 +35,21 @@ public class Commands {
         new RemoveCommand();
         new TrustCommand();
         new UnclaimCommand();
+
+        CommandExecutor exe = new CommandExecutor() {
+            @Override
+            public boolean onCommand(CommandSender s, Command c, String label, String[] args) {
+                List<String> sendingArgs = Arrays.asList(args).subList(1, args.length);
+                for (GuildsCommand command : GuildsCommand.instances.values()) {
+                    if (Arrays.asList(command.getAliases()).contains(args[0].toLowerCase())) {
+                        command.execute(s, sendingArgs);
+                        return true;
+                    }
+                }
+
+                return true;
+            }
+        };
+        Guilds.setExecutor(exe);
     }
 }
