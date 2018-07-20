@@ -13,7 +13,7 @@ Commands:
 		- Shows the information about your guild, or the information about a guild that's typed.
 			- Guild Name, Coins, Leader, Members, Chunks Claimed, Start Date, End Date (if archived).
 		- Shows information about a player that is typed into the second argument.
-			- Guild they're in, 
+			- Guild they're in, Money, Server Join Date, 
 	/g leader:
 		- Leader only commands
 			/g leader delete:
