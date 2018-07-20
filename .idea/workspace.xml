@@ -7,14 +7,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="2f2e1ac3-7ca1-4aa6-927a-9cc49a2a6e7f" name="Default" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/artifacts/Guilds.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/Jacksonnn/Guilds/GeneralMethods.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/Jacksonnn/Guilds/GeneralMethods.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/Jacksonnn/Guilds/commands/Commands.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/Jacksonnn/Guilds/commands/Commands.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/com/Jacksonnn/Guilds/commands/CreateCommand.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/Jacksonnn/Guilds/commands/CreateCommand.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/Jacksonnn/Guilds/commands/GuildsCommand.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/Jacksonnn/Guilds/commands/GuildsCommand.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/Jacksonnn/Guilds/configuration/ConfigManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/Jacksonnn/Guilds/configuration/ConfigManager.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/Jacksonnn/Guilds/storage/DBConnection.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/Jacksonnn/Guilds/storage/DBConnection.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/bin/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -26,85 +20,26 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="plan" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/plan">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="154">
-              <caret line="12" column="10" selection-start-line="12" selection-start-column="10" selection-end-line="12" selection-end-column="10" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="CreateCommand.java" pinned="false" current-in-tab="false">
+      <file leaf-file-name="CreateCommand.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/com/Jacksonnn/Guilds/commands/CreateCommand.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="301">
-              <caret line="22" column="46" lean-forward="true" selection-start-line="22" selection-start-column="46" selection-end-line="22" selection-end-column="46" />
+            <state relative-caret-position="221">
+              <caret line="22" column="13" selection-start-line="22" selection-start-column="13" selection-end-line="22" selection-end-column="13" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
             </state>
           </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Guilds.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/com/Jacksonnn/Guilds/Guilds.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="182">
-              <caret line="22" column="17" selection-start-line="22" selection-start-column="17" selection-end-line="22" selection-end-column="17" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Commands.java" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/com/Jacksonnn/Guilds/commands/Commands.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="265">
-              <caret line="40" column="52" selection-start-line="40" selection-start-column="52" selection-end-line="40" selection-end-column="52" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="plugin.yml" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/plugin.yml">
-          <provider selected="true" editor-type-id="text-editor" />
         </entry>
       </file>
       <file leaf-file-name="GuildsCommand.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/com/Jacksonnn/Guilds/commands/GuildsCommand.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="193">
+            <state relative-caret-position="-155">
               <caret line="50" column="16" selection-start-line="50" selection-start-column="16" selection-end-line="50" selection-end-column="16" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="GeneralMethods.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/com/Jacksonnn/Guilds/GeneralMethods.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="420">
-              <caret line="28" column="28" selection-start-line="28" selection-start-column="28" selection-end-line="28" selection-end-column="28" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="ConfigManager.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/com/Jacksonnn/Guilds/configuration/ConfigManager.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="325">
-              <caret line="50" column="66" selection-start-line="50" selection-start-column="31" selection-end-line="50" selection-end-column="66" />
             </state>
           </provider>
         </entry>
@@ -134,15 +69,21 @@
     <option name="CHANGED_PATHS">
       <list>
         <option value="$PROJECT_DIR$/src/com/Jacksonnn/Guilds/commands/SubCommands.java" />
-        <option value="$PROJECT_DIR$/src/com/Jacksonnn/Guilds/Guilds.java" />
         <option value="$PROJECT_DIR$/src/com/Jacksonnn/Guilds/commands/SubCommand.java" />
-        <option value="$PROJECT_DIR$/src/com/Jacksonnn/Guilds/commands/HelpCommand.java" />
         <option value="$PROJECT_DIR$/src/com/Jacksonnn/Guilds/commands/AdminCommand.java" />
         <option value="$PROJECT_DIR$/src/com/Jacksonnn/Guilds/commands/AttackCommand.java" />
         <option value="$PROJECT_DIR$/src/com/Jacksonnn/Guilds/commands/ChatCommand.java" />
         <option value="$PROJECT_DIR$/src/com/Jacksonnn/Guilds/commands/ClaimCommand.java" />
+        <option value="$PROJECT_DIR$/src/com/Jacksonnn/Guilds/commands/GuildsCommand.java" />
+        <option value="$PROJECT_DIR$/src/com/Jacksonnn/Guilds/storage/DBConnection.java" />
+        <option value="$PROJECT_DIR$/src/com/Jacksonnn/Guilds/configuration/ConfigManager.java" />
+        <option value="$PROJECT_DIR$/src/com/Jacksonnn/Guilds/GeneralMethods.java" />
+        <option value="$PROJECT_DIR$/src/com/Jacksonnn/Guilds/Guilds.java" />
+        <option value="$PROJECT_DIR$/src/com/Jacksonnn/Guilds/commands/Commands.java" />
+        <option value="$PROJECT_DIR$/src/com/Jacksonnn/Guilds/commands/AddCommand.java" />
         <option value="$PROJECT_DIR$/src/com/Jacksonnn/Guilds/commands/CoinsCommand.java" />
         <option value="$PROJECT_DIR$/src/com/Jacksonnn/Guilds/commands/DeleteCommand.java" />
+        <option value="$PROJECT_DIR$/src/com/Jacksonnn/Guilds/commands/HelpCommand.java" />
         <option value="$PROJECT_DIR$/src/com/Jacksonnn/Guilds/commands/InfoCommand.java" />
         <option value="$PROJECT_DIR$/src/com/Jacksonnn/Guilds/commands/InviteCommand.java" />
         <option value="$PROJECT_DIR$/src/com/Jacksonnn/Guilds/commands/JobCommand.java" />
@@ -150,13 +91,7 @@
         <option value="$PROJECT_DIR$/src/com/Jacksonnn/Guilds/commands/RemoveCommand.java" />
         <option value="$PROJECT_DIR$/src/com/Jacksonnn/Guilds/commands/TrustCommand.java" />
         <option value="$PROJECT_DIR$/src/com/Jacksonnn/Guilds/commands/UnclaimCommand.java" />
-        <option value="$PROJECT_DIR$/src/com/Jacksonnn/Guilds/commands/AddCommand.java" />
-        <option value="$PROJECT_DIR$/src/com/Jacksonnn/Guilds/commands/GuildsCommand.java" />
-        <option value="$PROJECT_DIR$/src/com/Jacksonnn/Guilds/storage/DBConnection.java" />
-        <option value="$PROJECT_DIR$/src/com/Jacksonnn/Guilds/configuration/ConfigManager.java" />
-        <option value="$PROJECT_DIR$/src/com/Jacksonnn/Guilds/GeneralMethods.java" />
         <option value="$PROJECT_DIR$/src/com/Jacksonnn/Guilds/commands/CreateCommand.java" />
-        <option value="$PROJECT_DIR$/src/com/Jacksonnn/Guilds/commands/Commands.java" />
       </list>
     </option>
   </component>
@@ -302,7 +237,7 @@
       <option name="presentableId" value="Default" />
       <updated>1531696083364</updated>
       <workItem from="1531696088296" duration="20000" />
-      <workItem from="1531696170812" duration="14857000" />
+      <workItem from="1531696170812" duration="16751000" />
     </task>
     <task id="LOCAL-00001" summary="BIG COMMIT&#10;&#10;Added Command/SubCommand System:&#10; - All &quot;/guilds&quot; subcommands have their own class and must follow the system.&#10;Created GeneralMethods class.&#10;Updated Guilds.java for new command system.">
       <created>1531874032480</created>
@@ -311,11 +246,25 @@
       <option name="project" value="LOCAL" />
       <updated>1531874032480</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="Updated the database table layout&#10;Added language and config options&#10;Created the create command&#10;Added the getCurrentDate() method&#10;Added the CommandExecutor to Commands.java&#10;&#10;NEED TO FIX COMMANDS NOT REGISTERING (Nothing happens when a command is done, literally nothing...)">
+      <created>1532058269828</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1532058269828</updated>
+    </task>
+    <task id="LOCAL-00003" summary="Command System Update&#10; - Fixed the commands not registering by registering them after the database and config were set up &amp; connected and by changing &quot;new Commands(this);&quot; to &quot;new Commands(plugin);&quot;&#10; - All SubCommands must have their base subcommand in their aliases.&#10; - Allowed the &quot;sendingArgs&quot; subList to contain 0 args -&gt; args.length instead of 1 so command wouldn't error when doing the base command only.***&#10; - Added enabled message to end of Commands(plugin).&#10; &#10; &#10; ***THIS WILL CHANGE WHEN WE ADD COMMAND BASE FUNCTION/METHOD!!!!">
+      <created>1532059504689</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1532059504689</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="14877000" />
+    <option name="totallyTimeSpent" value="16771000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="23" width="1281" height="724" extended-state="6" />
@@ -360,7 +309,9 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="BIG COMMIT&#10;&#10;Added Command/SubCommand System:&#10; - All &quot;/guilds&quot; subcommands have their own class and must follow the system.&#10;Created GeneralMethods class.&#10;Updated Guilds.java for new command system." />
-    <option name="LAST_COMMIT_MESSAGE" value="BIG COMMIT&#10;&#10;Added Command/SubCommand System:&#10; - All &quot;/guilds&quot; subcommands have their own class and must follow the system.&#10;Created GeneralMethods class.&#10;Updated Guilds.java for new command system." />
+    <MESSAGE value="Updated the database table layout&#10;Added language and config options&#10;Created the create command&#10;Added the getCurrentDate() method&#10;Added the CommandExecutor to Commands.java&#10;&#10;NEED TO FIX COMMANDS NOT REGISTERING (Nothing happens when a command is done, literally nothing...)" />
+    <MESSAGE value="Command System Update&#10; - Fixed the commands not registering by registering them after the database and config were set up &amp; connected and by changing &quot;new Commands(this);&quot; to &quot;new Commands(plugin);&quot;&#10; - All SubCommands must have their base subcommand in their aliases.&#10; - Allowed the &quot;sendingArgs&quot; subList to contain 0 args -&gt; args.length instead of 1 so command wouldn't error when doing the base command only.***&#10; - Added enabled message to end of Commands(plugin).&#10; &#10; &#10; ***THIS WILL CHANGE WHEN WE ADD COMMAND BASE FUNCTION/METHOD!!!!" />
+    <option name="LAST_COMMIT_MESSAGE" value="Command System Update&#10; - Fixed the commands not registering by registering them after the database and config were set up &amp; connected and by changing &quot;new Commands(this);&quot; to &quot;new Commands(plugin);&quot;&#10; - All SubCommands must have their base subcommand in their aliases.&#10; - Allowed the &quot;sendingArgs&quot; subList to contain 0 args -&gt; args.length instead of 1 so command wouldn't error when doing the base command only.***&#10; - Added enabled message to end of Commands(plugin).&#10; &#10; &#10; ***THIS WILL CHANGE WHEN WE ADD COMMAND BASE FUNCTION/METHOD!!!!" />
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/src/com/Jacksonnn/Guilds/commands/SubCommands.java">
@@ -377,10 +328,74 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/plan">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="154">
+          <caret line="12" column="10" selection-start-line="12" selection-start-column="10" selection-end-line="12" selection-end-column="10" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/Jacksonnn/Guilds/configuration/ConfigManager.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="325">
+          <caret line="50" column="66" selection-start-line="50" selection-start-column="31" selection-end-line="50" selection-end-column="66" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/Jacksonnn/Guilds/GeneralMethods.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="420">
+          <caret line="28" column="28" selection-start-line="28" selection-start-column="28" selection-end-line="28" selection-end-column="28" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/Jacksonnn/Guilds/storage/DBConnection.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="193">
+          <caret line="36" column="23" selection-start-line="36" selection-start-column="23" selection-end-line="36" selection-end-column="23" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/plugin.yml">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/com/Jacksonnn/Guilds/commands/SubCommand.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="341">
+        <state relative-caret-position="362">
           <caret line="35" column="35" selection-start-line="35" selection-start-column="35" selection-end-line="35" selection-end-column="35" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/Jacksonnn/Guilds/Guilds.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="475">
+          <caret line="42" column="5" lean-forward="true" selection-start-line="42" selection-start-column="5" selection-end-line="42" selection-end-column="5" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/Jacksonnn/Guilds/commands/Commands.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="477">
+          <caret line="35" column="28" lean-forward="true" selection-start-line="35" selection-start-column="28" selection-end-line="35" selection-end-column="28" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/Jacksonnn/Guilds/commands/AddCommand.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="150">
+          <caret line="10" column="142" selection-start-line="10" selection-start-column="142" selection-end-line="10" selection-end-column="142" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
@@ -427,80 +442,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/Jacksonnn/Guilds/commands/CoinsCommand.java">
+    <entry file="file://$PROJECT_DIR$/src/com/Jacksonnn/Guilds/commands/UnclaimCommand.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="135">
-          <caret line="9" column="183" selection-start-line="9" selection-start-column="183" selection-end-line="9" selection-end-column="183" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/Jacksonnn/Guilds/commands/DeleteCommand.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="135">
-          <caret line="9" column="144" selection-start-line="9" selection-start-column="144" selection-end-line="9" selection-end-column="144" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/Jacksonnn/Guilds/commands/HelpCommand.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="225">
-          <caret line="15" column="5" lean-forward="true" selection-start-line="9" selection-start-column="4" selection-end-line="15" selection-end-column="5" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/Jacksonnn/Guilds/commands/InfoCommand.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="135">
-          <caret line="9" column="154" selection-start-line="9" selection-start-column="154" selection-end-line="9" selection-end-column="154" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/Jacksonnn/Guilds/commands/InviteCommand.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="135">
-          <caret line="9" column="146" selection-start-line="9" selection-start-column="146" selection-end-line="9" selection-end-column="146" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/Jacksonnn/Guilds/commands/JobCommand.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="135">
-          <caret line="9" column="135" selection-start-line="9" selection-start-column="135" selection-end-line="9" selection-end-column="135" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/Jacksonnn/Guilds/commands/KickCommand.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="135">
-          <caret line="9" column="140" selection-start-line="9" selection-start-column="140" selection-end-line="9" selection-end-column="140" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/Jacksonnn/Guilds/commands/RemoveCommand.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="135">
-          <caret line="9" column="145" selection-start-line="9" selection-start-column="145" selection-end-line="9" selection-end-column="145" />
+          <caret line="9" column="150" selection-start-line="9" selection-start-column="150" selection-end-line="9" selection-end-column="150" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
@@ -510,51 +455,87 @@
     <entry file="file://$PROJECT_DIR$/src/com/Jacksonnn/Guilds/commands/TrustCommand.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="135">
-          <caret line="9" column="149" selection-start-line="9" selection-start-column="149" selection-end-line="9" selection-end-column="149" />
+          <caret line="9" column="152" lean-forward="true" selection-start-line="9" selection-start-column="152" selection-end-line="9" selection-end-column="152" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/Jacksonnn/Guilds/commands/UnclaimCommand.java">
+    <entry file="file://$PROJECT_DIR$/src/com/Jacksonnn/Guilds/commands/RemoveCommand.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="135">
-          <caret line="9" column="140" selection-start-line="9" selection-start-column="140" selection-end-line="9" selection-end-column="140" />
+          <caret line="9" column="154" selection-start-line="9" selection-start-column="154" selection-end-line="9" selection-end-column="154" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/Jacksonnn/Guilds/commands/AddCommand.java">
+    <entry file="file://$PROJECT_DIR$/src/com/Jacksonnn/Guilds/commands/KickCommand.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="225">
-          <caret line="15" column="5" lean-forward="true" selection-start-line="15" selection-start-column="5" selection-end-line="15" selection-end-column="5" />
+        <state relative-caret-position="135">
+          <caret line="9" column="147" selection-start-line="9" selection-start-column="147" selection-end-line="9" selection-end-column="147" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/plan">
+    <entry file="file://$PROJECT_DIR$/src/com/Jacksonnn/Guilds/commands/JobCommand.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="154">
-          <caret line="12" column="10" selection-start-line="12" selection-start-column="10" selection-end-line="12" selection-end-column="10" />
+        <state relative-caret-position="135">
+          <caret line="9" column="151" selection-start-line="9" selection-start-column="151" selection-end-line="9" selection-end-column="151" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/Jacksonnn/Guilds/configuration/ConfigManager.java">
+    <entry file="file://$PROJECT_DIR$/src/com/Jacksonnn/Guilds/commands/InviteCommand.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="325">
-          <caret line="50" column="66" selection-start-line="50" selection-start-column="31" selection-end-line="50" selection-end-column="66" />
+        <state relative-caret-position="135">
+          <caret line="9" column="143" selection-start-line="9" selection-start-column="143" selection-end-line="9" selection-end-column="143" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/Jacksonnn/Guilds/GeneralMethods.java">
+    <entry file="file://$PROJECT_DIR$/src/com/Jacksonnn/Guilds/commands/InfoCommand.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="420">
-          <caret line="28" column="28" selection-start-line="28" selection-start-column="28" selection-end-line="28" selection-end-column="28" />
+        <state relative-caret-position="135">
+          <caret line="9" column="162" selection-start-line="9" selection-start-column="162" selection-end-line="9" selection-end-column="162" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/Jacksonnn/Guilds/commands/HelpCommand.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="150">
+          <caret line="10" column="151" selection-start-line="10" selection-start-column="151" selection-end-line="10" selection-end-column="151" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/Jacksonnn/Guilds/commands/CoinsCommand.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="135">
+          <caret line="9" column="192" selection-start-line="9" selection-start-column="192" selection-end-line="9" selection-end-column="192" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/Jacksonnn/Guilds/commands/DeleteCommand.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="135">
+          <caret line="9" column="153" selection-start-line="9" selection-start-column="153" selection-end-line="9" selection-end-column="153" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
@@ -563,7 +544,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/com/Jacksonnn/Guilds/commands/GuildsCommand.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="193">
+        <state relative-caret-position="-155">
           <caret line="50" column="16" selection-start-line="50" selection-start-column="16" selection-end-line="50" selection-end-column="16" />
           <folding>
             <element signature="imports" expanded="true" />
@@ -573,38 +554,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/com/Jacksonnn/Guilds/commands/CreateCommand.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="301">
-          <caret line="22" column="46" lean-forward="true" selection-start-line="22" selection-start-column="46" selection-end-line="22" selection-end-column="46" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/Jacksonnn/Guilds/storage/DBConnection.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="193">
-          <caret line="36" column="23" selection-start-line="36" selection-start-column="23" selection-end-line="36" selection-end-column="23" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/plugin.yml">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/Jacksonnn/Guilds/Guilds.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="182">
-          <caret line="22" column="17" selection-start-line="22" selection-start-column="17" selection-end-line="22" selection-end-column="17" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/Jacksonnn/Guilds/commands/Commands.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="265">
-          <caret line="40" column="52" selection-start-line="40" selection-start-column="52" selection-end-line="40" selection-end-column="52" />
+        <state relative-caret-position="221">
+          <caret line="22" column="13" selection-start-line="22" selection-start-column="13" selection-end-line="22" selection-end-column="13" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>

@@ -12,18 +12,20 @@ import java.util.List;
 
 public class CreateCommand extends GuildsCommand {
     public CreateCommand() {
-        super("create", "/guilds create <name> [<Owner>]", ConfigManager.languageConfig.get().getString("Commands.Create.Description"), new String[] { "new", "start", "create" });
+        super("create", "/guilds create <name> [<leader>]", ConfigManager.languageConfig.get().getString("Commands.Create.Description"), new String[] { "new", "start", "create" });
     }
 
     public void execute(CommandSender sender, List<String> args) {
         if (correctLength(sender, args.size(), 2, 2)) {
-            if (hasPermission(sender, "admin")) {
-                create(sender, args.get(0), args.get(1));
+                if (hasPermission(sender, "admin")) {
+                    create(sender, args.get(0), args.get(1));
+                }
+        } else if (correctLength(sender, args.size(), 1, 1) && isPlayer(sender)) {
+            if (isPlayer(sender)) {
+                if (hasPermission(sender)) {
+                    create(sender, args.get(0), sender.getName());
+                }
             }
-        } else if (correctLength(sender, args.size(), 1, 1)) {
-             if (hasPermission(sender)) {
-                 create(sender, args.get(0), sender.getName());
-             }
         } else {
             help(sender, false);
         }
@@ -38,6 +40,6 @@ public class CreateCommand extends GuildsCommand {
                 "`" + leader + "`" +
                 "`" + ConfigManager.defaultConfig.get().get("Guilds.StarterOptions.startingCoins") + "`" +
                 "`" + getCurrentDate() + "`");
-        sender.sendMessage(GeneralMethods.prefixSuccess + "Created the guild (" + guildName + "), with the leader " + leader + "and " + scoins + "coins on " + getCurrentDate() + ".");
+        sender.sendMessage(GeneralMethods.prefixSuccess + "Created the guild (" + guildName + "), with the leader " + leader + " and " + scoins + " coins on " + getCurrentDate() + ".");
     }
 }
