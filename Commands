@@ -4,9 +4,11 @@ Commands:
 		- Shows the information about the Guild they're currently in, and if they're 
 		  not in a guild, it shows them command help saying to find a guild.
 	/g help [<page no>]:
-		- Shows the help page. (While plugin in development, make it so that they're all printed instead of multiple pages)
+		- Shows the help page. (While plugin in development, make it so that they're 
+		  all printed instead of multiple pages)
 	/g list [<page no>]:
-		- Shows a list of all of the guilds. (While plugin in development, make it so that they're all printed instead of multiple pages)
+		- Shows a list of all of the guilds. (While plugin in development, make it so 
+		  that they're all printed instead of multiple pages)
 	/g create <guild>:
 		- Creates a guild and sends message sending information about that guild.
 	/g info [<guild | player>]:
@@ -17,32 +19,32 @@ Commands:
 	/g leader:
 		- Leader only commands
 			/g leader delete:
-				- 
+				- Deletes the guild they're in.
 			/g leader invite <player>:
-				- 
+				- Invites a player to the guild.
 			/g leader kick <player>:
-				- 
+				- Kicks a player from the guild.
 			/g leader trust <guild>:
-				- 
+				- Trust's the guild to be in the leader's territory.
 			/g ledaer attack <guild>:
-				- 
+				- Declares war on the guild.
 	/g claim:
-		-
+		- Claims land for the guild.
 	/g unclaim:
-		-
+		- Unclaims land for the guild.
 	/g coins:
-		-
+		- Guilds Currency. (COMING SOON)
 			/g coins deposit <amount>:
-				-
-			/g coins withdrawal <amount>:
-				-
+				- Deposits coins into the guild.
+			/g coins withdraw <amount>:
+				- Withdraw money from the guild. 
 			/g coins add <amount>:
 				- Admin only
 			/g coins remove <amount>:
 				- Admin only
 	/g item:
-		-
+		- Guilds Items (COMING SOON)
 	/g job:
-		-
+		- Guilds Jobs (COMING SOON)
 	/g chat:
-		-
+		- Guilds Chat (COMING SOON)
