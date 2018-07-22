@@ -4,7 +4,6 @@ import com.Jacksonnn.Guilds.GeneralMethods;
 import com.Jacksonnn.Guilds.configuration.ConfigManager;
 import com.Jacksonnn.Guilds.storage.DBConnection;
 import org.bukkit.ChatColor;
-import org.bukkit.command.Command;
 import org.bukkit.command.CommandSender;
 import org.bukkit.entity.Player;
 

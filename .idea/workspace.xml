@@ -8,7 +8,6 @@
   <component name="ChangeListManager">
     <list default="true" id="2f2e1ac3-7ca1-4aa6-927a-9cc49a2a6e7f" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/Jacksonnn/Guilds/Guilds.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/Jacksonnn/Guilds/Guilds.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/com/Jacksonnn/Guilds/commands/CreateCommand.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/Jacksonnn/Guilds/commands/CreateCommand.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/com/Jacksonnn/Guilds/commands/GuildsCommand.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/Jacksonnn/Guilds/commands/GuildsCommand.java" afterDir="false" />
     </list>
@@ -36,11 +35,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="CreateCommand.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="CreateCommand.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/com/Jacksonnn/Guilds/commands/CreateCommand.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="736">
-              <caret line="60" column="34" selection-start-line="60" selection-start-column="34" selection-end-line="60" selection-end-column="34" />
+            <state relative-caret-position="135">
+              <caret line="9" column="22" selection-start-line="9" selection-start-column="22" selection-end-line="9" selection-end-column="22" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -48,13 +47,12 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="GuildsCommand.java" pinned="false" current-in-tab="false">
+      <file leaf-file-name="GuildsCommand.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/com/Jacksonnn/Guilds/commands/GuildsCommand.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="244">
-              <caret line="83" column="25" selection-start-line="83" selection-start-column="25" selection-end-line="83" selection-end-column="25" />
+            <state relative-caret-position="90">
+              <caret line="6" column="34" selection-start-line="6" selection-start-column="34" selection-end-line="6" selection-end-column="34" />
               <folding>
-                <element signature="imports" expanded="true" />
                 <element signature="e#2963#2964#0" expanded="true" />
                 <element signature="e#3043#3044#0" expanded="true" />
               </folding>
@@ -133,8 +131,8 @@
         <option value="$PROJECT_DIR$/src/com/Jacksonnn/Guilds/GeneralMethods.java" />
         <option value="$PROJECT_DIR$/src/com/Jacksonnn/Guilds/commands/Commands.java" />
         <option value="$PROJECT_DIR$/src/com/Jacksonnn/Guilds/storage/DBConnection.java" />
-        <option value="$PROJECT_DIR$/src/com/Jacksonnn/Guilds/commands/CreateCommand.java" />
         <option value="$PROJECT_DIR$/src/com/Jacksonnn/Guilds/Guilds.java" />
+        <option value="$PROJECT_DIR$/src/com/Jacksonnn/Guilds/commands/CreateCommand.java" />
         <option value="$PROJECT_DIR$/src/com/Jacksonnn/Guilds/commands/GuildsCommand.java" />
       </list>
     </option>
@@ -280,7 +278,7 @@
       <workItem from="1531696088296" duration="20000" />
       <workItem from="1531696170812" duration="16751000" />
       <workItem from="1532062495455" duration="2120000" />
-      <workItem from="1532135449461" duration="6969000" />
+      <workItem from="1532135449461" duration="7730000" />
     </task>
     <task id="LOCAL-00001" summary="BIG COMMIT&#10;&#10;Added Command/SubCommand System:&#10; - All &quot;/guilds&quot; subcommands have their own class and must follow the system.&#10;Created GeneralMethods class.&#10;Updated Guilds.java for new command system.">
       <created>1531874032480</created>
@@ -310,11 +308,18 @@
       <option name="project" value="LOCAL" />
       <updated>1532064659739</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="General Fixes:&#10;    CreateCommand:&#10;     - Added inAGuild() check&#10;     - Added guildExists() check&#10;     - Added guild to the guilds HashSet that will be loaded when the server loads the plugin.&#10;    GuildsCommand:&#10;     - Added isGuildLeader()&#10;     - Added inAGuild() (COMING SOON, NOT STARTED)&#10;     - Added loadLeaders() (EXECUTES ON PLUGIN LOAD)&#10;     - Added guildExists()&#10;     - Added getGuilds() (GETS THE GUILDS DATABASE)&#10;     - Added loadGuilds() (EXECUTES ON PLUGIN LOAD)&#10;    Guilds:&#10;     - Added GuildsCommand.loadGuilds(); to the enable sequence.&#10;     - Added GuildsCommand.loadLeaders(); to the enable sequence.">
+      <created>1532270428075</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1532270428075</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="25860000" />
+    <option name="totallyTimeSpent" value="26621000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="23" width="1280" height="725" extended-state="6" />
@@ -362,7 +367,8 @@
     <MESSAGE value="Updated the database table layout&#10;Added language and config options&#10;Created the create command&#10;Added the getCurrentDate() method&#10;Added the CommandExecutor to Commands.java&#10;&#10;NEED TO FIX COMMANDS NOT REGISTERING (Nothing happens when a command is done, literally nothing...)" />
     <MESSAGE value="Command System Update&#10; - Fixed the commands not registering by registering them after the database and config were set up &amp; connected and by changing &quot;new Commands(this);&quot; to &quot;new Commands(plugin);&quot;&#10; - All SubCommands must have their base subcommand in their aliases.&#10; - Allowed the &quot;sendingArgs&quot; subList to contain 0 args -&gt; args.length instead of 1 so command wouldn't error when doing the base command only.***&#10; - Added enabled message to end of Commands(plugin).&#10; &#10; &#10; ***THIS WILL CHANGE WHEN WE ADD COMMAND BASE FUNCTION/METHOD!!!!" />
     <MESSAGE value="Almost fully finished CreateCommand.java, then I will be onto RemoveCommand.java.&#10;Removed the time from getCurrentDate().&#10;Added base command help.&#10;Fixed SQL errors" />
-    <option name="LAST_COMMIT_MESSAGE" value="Almost fully finished CreateCommand.java, then I will be onto RemoveCommand.java.&#10;Removed the time from getCurrentDate().&#10;Added base command help.&#10;Fixed SQL errors" />
+    <MESSAGE value="General Fixes:&#10;    CreateCommand:&#10;     - Added inAGuild() check&#10;     - Added guildExists() check&#10;     - Added guild to the guilds HashSet that will be loaded when the server loads the plugin.&#10;    GuildsCommand:&#10;     - Added isGuildLeader()&#10;     - Added inAGuild() (COMING SOON, NOT STARTED)&#10;     - Added loadLeaders() (EXECUTES ON PLUGIN LOAD)&#10;     - Added guildExists()&#10;     - Added getGuilds() (GETS THE GUILDS DATABASE)&#10;     - Added loadGuilds() (EXECUTES ON PLUGIN LOAD)&#10;    Guilds:&#10;     - Added GuildsCommand.loadGuilds(); to the enable sequence.&#10;     - Added GuildsCommand.loadLeaders(); to the enable sequence." />
+    <option name="LAST_COMMIT_MESSAGE" value="General Fixes:&#10;    CreateCommand:&#10;     - Added inAGuild() check&#10;     - Added guildExists() check&#10;     - Added guild to the guilds HashSet that will be loaded when the server loads the plugin.&#10;    GuildsCommand:&#10;     - Added isGuildLeader()&#10;     - Added inAGuild() (COMING SOON, NOT STARTED)&#10;     - Added loadLeaders() (EXECUTES ON PLUGIN LOAD)&#10;     - Added guildExists()&#10;     - Added getGuilds() (GETS THE GUILDS DATABASE)&#10;     - Added loadGuilds() (EXECUTES ON PLUGIN LOAD)&#10;    Guilds:&#10;     - Added GuildsCommand.loadGuilds(); to the enable sequence.&#10;     - Added GuildsCommand.loadLeaders(); to the enable sequence." />
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/src/com/Jacksonnn/Guilds/commands/CreateCommand.java">
@@ -380,7 +386,6 @@
         <state relative-caret-position="630">
           <caret line="50" column="16" selection-start-line="50" selection-start-column="16" selection-end-line="50" selection-end-column="16" />
           <folding>
-            <element signature="imports" expanded="true" />
             <element signature="e#2963#2964#0" expanded="true" />
             <element signature="e#3043#3044#0" expanded="true" />
           </folding>
@@ -412,7 +417,6 @@
         <state relative-caret-position="525">
           <caret line="50" column="16" selection-start-line="50" selection-start-column="16" selection-end-line="50" selection-end-column="16" />
           <folding>
-            <element signature="imports" expanded="true" />
             <element signature="e#2963#2964#0" expanded="true" />
             <element signature="e#3043#3044#0" expanded="true" />
           </folding>
@@ -653,18 +657,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/Jacksonnn/Guilds/commands/GuildsCommand.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="244">
-          <caret line="83" column="25" selection-start-line="83" selection-start-column="25" selection-end-line="83" selection-end-column="25" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#2963#2964#0" expanded="true" />
-            <element signature="e#3043#3044#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/com/Jacksonnn/Guilds/Guilds.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="333">
@@ -677,10 +669,21 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/com/Jacksonnn/Guilds/commands/CreateCommand.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="736">
-          <caret line="60" column="34" selection-start-line="60" selection-start-column="34" selection-end-line="60" selection-end-column="34" />
+        <state relative-caret-position="135">
+          <caret line="9" column="22" selection-start-line="9" selection-start-column="22" selection-end-line="9" selection-end-column="22" />
           <folding>
             <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/Jacksonnn/Guilds/commands/GuildsCommand.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="90">
+          <caret line="6" column="34" selection-start-line="6" selection-start-column="34" selection-end-line="6" selection-end-column="34" />
+          <folding>
+            <element signature="e#2963#2964#0" expanded="true" />
+            <element signature="e#3043#3044#0" expanded="true" />
           </folding>
         </state>
       </provider>

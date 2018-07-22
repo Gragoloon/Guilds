@@ -8,8 +8,6 @@ import com.Jacksonnn.Guilds.storage.DBConnection;
 import org.bukkit.command.CommandSender;
 
 import java.util.List;
-import java.util.UUID;
-
 
 public class CreateCommand extends GuildsCommand {
     public CreateCommand() {
