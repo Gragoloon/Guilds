@@ -8,6 +8,7 @@ import com.Jacksonnn.Guilds.storage.DBConnection;
 import org.bukkit.command.CommandSender;
 
 import java.util.List;
+import java.util.UUID;
 
 
 public class CreateCommand extends GuildsCommand {
@@ -40,8 +41,12 @@ public class CreateCommand extends GuildsCommand {
                 "'" + leader + "', " +
                 "'" + ConfigManager.defaultConfig.get().get("Guilds.StarterOptions.startingCoins") + "', " +
                 "'" + getCurrentDate() + "')");
+
+        DBConnection.sql.modifyQuery("INSERT INTO guilds_players (uuid, name, current_guild) VALUES (" +
+                "'" + leader + "', " +
+                "'" + sender.getName() + "', " +
+                "'" + guildName + "')");
         sender.sendMessage(GeneralMethods.prefixSuccess + "Created the guild (" + guildName + "), with the leader " + leader + " and " + scoins + " coins on " + getCurrentDate() + ".");
-        return;
     }
 }
 

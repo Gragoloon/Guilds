@@ -22,21 +22,16 @@ public class Commands {
 
     public void registerCommands() {
         PluginCommand Guilds = plugin.getCommand("guilds");
-        new AddCommand();
         new AdminCommand();
-        new AttackCommand();
         new ChatCommand();
         new ClaimCommand();
         new CoinsCommand();
         new CreateCommand();
-        new DeleteCommand();
         new HelpCommand();
         new InfoCommand();
-        new InviteCommand();
         new JobCommand();
-        new KickCommand();
-        new RemoveCommand();
-        new TrustCommand();
+        new LeaderCommand();
+        new ListCommand();
         new UnclaimCommand();
 
         CommandExecutor exe = new CommandExecutor() {
@@ -47,20 +42,13 @@ public class Commands {
                     s.sendMessage(GeneralMethods.prefixNormal + "Guilds Command Help");
                     s.sendMessage(GeneralMethods.prefixNormal + "Aliases: /g, /guild, /guilds");
                     s.sendMessage(ChatColor.YELLOW + "/guilds help - Displays this help menu.");
-                    s.sendMessage(ChatColor.YELLOW + "/guilds add - Description coming soon");
                     s.sendMessage(ChatColor.YELLOW + "/guilds admin - Description coming soon");
-                    s.sendMessage(ChatColor.YELLOW + "/guilds attack - Description coming soon");
                     s.sendMessage(ChatColor.YELLOW + "/guilds chat - Description coming soon");
                     s.sendMessage(ChatColor.YELLOW + "/guilds claim - Description coming soon");
                     s.sendMessage(ChatColor.YELLOW + "/guilds coins - Description coming soon");
                     s.sendMessage(ChatColor.YELLOW + "/guilds create - Description coming soon");
-                    s.sendMessage(ChatColor.YELLOW + "/guilds delete - Description coming soon");
                     s.sendMessage(ChatColor.YELLOW + "/guilds info - Description coming soon");
-                    s.sendMessage(ChatColor.YELLOW + "/guilds invite - Description coming soon");
                     s.sendMessage(ChatColor.YELLOW + "/guilds job - Description coming soon");
-                    s.sendMessage(ChatColor.YELLOW + "/guilds kick - Description coming soon");
-                    s.sendMessage(ChatColor.YELLOW + "/guilds remove - Description coming soon");
-                    s.sendMessage(ChatColor.YELLOW + "/guilds trust - Description coming soon");
                     s.sendMessage(ChatColor.YELLOW + "/guilds unclaim - Description coming soon");
 
                     return true;

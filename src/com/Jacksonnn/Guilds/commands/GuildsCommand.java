@@ -3,6 +3,7 @@ package com.Jacksonnn.Guilds.commands;
 import com.Jacksonnn.Guilds.GeneralMethods;
 import com.Jacksonnn.Guilds.configuration.ConfigManager;
 import org.bukkit.ChatColor;
+import org.bukkit.command.Command;
 import org.bukkit.command.CommandSender;
 import org.bukkit.entity.Player;
 
@@ -62,6 +63,11 @@ public abstract class GuildsCommand implements SubCommand {
             GeneralMethods.sendMessage(sender, "error", this.noPermissionMessage);
             return false;
         }
+    }
+
+    public boolean inAGuild(CommandSender sender) {
+        //Coming Soon
+        return true;
     }
 
     public boolean hasPermission(CommandSender sender, String extra) {
