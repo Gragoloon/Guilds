@@ -3,6 +3,7 @@ package com.Jacksonnn.Guilds;
 import java.util.logging.Logger;
 
 import com.Jacksonnn.Guilds.commands.Commands;
+import com.Jacksonnn.Guilds.commands.GuildsCommand;
 import org.bukkit.Bukkit;
 import org.bukkit.plugin.java.JavaPlugin;
 
@@ -30,6 +31,8 @@ public class Guilds extends JavaPlugin {
 			// Message is logged by DBConnection
 			return;
 		}
+		GuildsCommand.loadGuilds();
+		GuildsCommand.loadLeaders();
         new Commands(plugin);
 		Bukkit.getServer().getLogger().info(ChatColor.DARK_GREEN + "[Guilds] Guilds has sucessfully been enabled!");
 	}

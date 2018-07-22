@@ -2,13 +2,18 @@ package com.Jacksonnn.Guilds.commands;
 
 import com.Jacksonnn.Guilds.GeneralMethods;
 import com.Jacksonnn.Guilds.configuration.ConfigManager;
+import com.Jacksonnn.Guilds.storage.DBConnection;
 import org.bukkit.ChatColor;
 import org.bukkit.command.Command;
 import org.bukkit.command.CommandSender;
 import org.bukkit.entity.Player;
 
+import java.sql.ResultSet;
+import java.sql.SQLException;
 import java.util.HashMap;
+import java.util.HashSet;
 import java.util.Map;
+import java.util.Set;
 
 public abstract class GuildsCommand implements SubCommand {
 
@@ -18,6 +23,8 @@ public abstract class GuildsCommand implements SubCommand {
     private final String[] aliases;
     private final String noPermissionMessage;
     private final String mustBePlayer;
+    public static Set<String> guilds = new HashSet<>();
+    public static Set<String> leaders = new HashSet<>();
 
     public static Map<String, GuildsCommand> instances = new HashMap<>();
 
@@ -65,9 +72,49 @@ public abstract class GuildsCommand implements SubCommand {
         }
     }
 
-    public boolean inAGuild(CommandSender sender) {
+    public boolean inAGuild(String player) {
         //Coming Soon
         return true;
+    }
+
+    public boolean isGuildLeader(String player) {
+        if (leaders.contains(player)) {
+            return true;
+        } else {
+            return false;
+        }
+    }
+
+    public static void loadLeaders() {
+        try {
+            while(getGuilds().next()) {
+                leaders.add(getGuilds().getString("leader"));
+            }
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+    }
+
+    public boolean guildExists(String guild) {
+        if (guilds.contains(guild)) {
+            return true;
+        } else {
+            return false;
+        }
+    }
+
+    public static ResultSet getGuilds() {
+        return DBConnection.sql.readQuery("SELECT * FROM guilds_guilds");
+    }
+
+    public static void loadGuilds() {
+        try {
+            while (getGuilds().next()) {
+                guilds.add(getGuilds().getString("guild"));
+            }
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
     }
 
     public boolean hasPermission(CommandSender sender, String extra) {
