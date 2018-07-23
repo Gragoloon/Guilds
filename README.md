@@ -7,5 +7,5 @@ Please read our terms of service, and information sections of this readme.
 **Information**
 Coming soon, thank you for reading.
 **Contact Information**
-Join our Discord 
+Join our Discord
 » bit.ly/2JF3cvJ
