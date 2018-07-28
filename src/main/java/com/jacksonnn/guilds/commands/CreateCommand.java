@@ -61,15 +61,3 @@ public class CreateCommand extends GuildsCommand {
         }
     }
 }
-
-/*
-DBConnection.sql.modifyQuery("INSERT INTO bounties (player, issuer, item, amount, startdate, enddate, assassin, status) VALUES ("
-				+ "'" + player + "', "
-				+ "'" + issuer + "', "
-				+ "'" + item + "', "
-				+ amount + ", "
-				+ "'" + getCurrentDate() + "', "
-				+ null + ", "
-				+ null + ", "
-				+ "'open')");
- */
