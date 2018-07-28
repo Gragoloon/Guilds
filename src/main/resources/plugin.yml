@@ -1,7 +1,7 @@
 name: Guilds
 author: Jacksonnn
 version: BETA v1.0
-main: Guilds
+main: com.jacksonnn.guilds.Guilds
 commands:
   guilds:
     aliases: [g, guild]
