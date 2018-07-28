@@ -2,6 +2,7 @@ package com.jacksonnn.guilds.commands;
 
 import java.util.List;
 import org.bukkit.command.CommandSender;
+import org.bukkit.entity.Player;
 
 /**
  * Interface representation of a command executor.
@@ -20,7 +21,7 @@ public interface SubCommand {
    *
    * @return All aliases for the command
    */
-  public String[] getAliases();
+  public List<String> getAliases();
 
   /**
    * Gets the proper use of the command, in the format '/b
@@ -37,10 +38,23 @@ public interface SubCommand {
   public String getDescription();
 
   /**
+   * @return does it require a player
+   */
+  public boolean requiresPlayer();
+
+  /**
    * Executes the command.
    *
    * @param sender The CommandSender who issued the command
    * @param args the command's arguments
    */
   public void execute(CommandSender sender, List<String> args);
+
+  /**
+   * Executes the command.
+   *
+   * @param player The CommandSender who issued the command
+   * @param args the command's arguments
+   */
+  public void execute(Player player, List<String> args);
 }

@@ -1,19 +1,19 @@
 package com.jacksonnn.guilds.storage;
 
-import com.jacksonnn.guilds.Guilds;
+import com.jacksonnn.guilds.GuildsMain;
 import java.io.File;
 import java.sql.SQLException;
 
 public class DatabaseManager {
 
   private Database database;
-  private Guilds plugin;
+  private GuildsMain plugin;
 
   public DatabaseManager() {
-    database = getDatabase();
+    database = loadDatabase();
   }
 
-  private Database getDatabase() {
+  private Database loadDatabase() {
     Database database = null;
     if (plugin.getConfig().getString("Storage.engine").equalsIgnoreCase("sqlite")) {
       database = new SqlLite(plugin.getDataFolder() + File.separator + plugin.getConfig()
@@ -32,5 +32,9 @@ public class DatabaseManager {
 
   public void init() throws SQLException, ClassNotFoundException {
     database.init();
+  }
+
+  public Database getDatabase() {
+    return database;
   }
 }

@@ -9,12 +9,12 @@ import org.bukkit.command.CommandSender;
 public class GuildUtils {
 
   public enum Prefix {
-    prefixNormal(ChatColor.DARK_GRAY + "[" + ChatColor.GREEN + "Guilds" + ChatColor.DARK_GRAY + "] "
+    prefixNormal(ChatColor.DARK_GRAY + "[" + ChatColor.GREEN + "GuildsMain" + ChatColor.DARK_GRAY + "] "
         + ChatColor.YELLOW),
-    prfixError("[" + ChatColor.GREEN + "Guilds" + ChatColor.DARK_GRAY + "] "
+    prfixError("[" + ChatColor.GREEN + "GuildsMain" + ChatColor.DARK_GRAY + "] "
         + ChatColor.DARK_RED + "Error! " + ChatColor.RED),
     prefixSuccess(
-        ChatColor.DARK_GRAY + "[" + ChatColor.GREEN + "Guilds" + ChatColor.DARK_GRAY + "] "
+        ChatColor.DARK_GRAY + "[" + ChatColor.GREEN + "GuildsMain" + ChatColor.DARK_GRAY + "] "
             + ChatColor.DARK_GREEN + "Success! " + ChatColor.GREEN);
 
     private String prefix;
@@ -30,6 +30,10 @@ public class GuildUtils {
 
   public static void sendMessage(CommandSender sender, Prefix prefix, String message) {
     sender.sendMessage(prefix.getPrefix() + message);
+  }
+
+  public static String color(final String string) {
+    return ChatColor.translateAlternateColorCodes('&', string);
   }
 
   public static String getCurrentDate() {

@@ -1,21 +1,22 @@
 package com.jacksonnn.guilds.configuration;
 
+import com.jacksonnn.guilds.GuildsMain;
 import java.io.File;
 import org.bukkit.configuration.file.FileConfiguration;
 
 public class ConfigManager {
 
-  public static Config defaultConfig;
-  public static Config languageConfig;
+  private Config defaultConfig;
+  private Config languageConfig;
 
-  public ConfigManager() {
-    defaultConfig = new Config(new File("config.yml"));
-    languageConfig = new Config(new File("language.yml"));
+  public ConfigManager(GuildsMain guildsMain) {
+    defaultConfig = new Config(new File(guildsMain.getDataFolder(), "config.yml"));
+    languageConfig = new Config(new File(guildsMain.getDataFolder(), "language.yml"));
     configCheck(ConfigType.DEFAULT);
     configCheck(ConfigType.LANGUAGE);
   }
 
-  public static void configCheck(ConfigType type) {
+  public void configCheck(ConfigType type) {
     if (type == ConfigType.LANGUAGE) {
       FileConfiguration lang;
       lang = languageConfig.get();
@@ -36,6 +37,7 @@ public class ConfigManager {
       lang.addDefault("Commands.Remove.Description", "&6Remove Description");
       lang.addDefault("Commands.Trust.Description", "&6Trust Description");
       lang.addDefault("Commands.Unclaim.Description", "&6Unclaim Description");
+      lang.addDefault("invalid-command", "&6Please run /help for a commands");
 
       lang.addDefault("Commands.NoPermission", "You do not have permission to do that.");
       lang.addDefault("Commands.mustBePlayer", "The executor of the command must be a player.");
@@ -48,7 +50,7 @@ public class ConfigManager {
       FileConfiguration config;
       config = defaultConfig.get();
 
-      config.addDefault("Guilds.StarterOptions.startingCoins", "250");
+      config.addDefault("GuildsMain.StarterOptions.startingCoins", "250");
 
       config.addDefault("Storage.engine", "sqlite");
 
@@ -63,5 +65,14 @@ public class ConfigManager {
 
       defaultConfig.save();
     }
+  }
+
+
+  public Config getDefaultConfig() {
+    return defaultConfig;
+  }
+
+  public Config getLanguageConfig() {
+    return languageConfig;
   }
 }

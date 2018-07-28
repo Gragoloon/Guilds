@@ -1,6 +1,6 @@
 package com.jacksonnn.guilds.configuration;
 
-import com.jacksonnn.guilds.Guilds;
+import com.jacksonnn.guilds.GuildsMain;
 import java.io.File;
 import org.bukkit.configuration.file.FileConfiguration;
 import org.bukkit.configuration.file.YamlConfiguration;
@@ -8,7 +8,7 @@ import org.bukkit.configuration.file.YamlConfiguration;
 public class Config {
 
   private File file;
-  private Guilds plugin;
+  private GuildsMain plugin;
   private FileConfiguration config;
 
   public Config(File file) {

@@ -1,146 +1,91 @@
 package com.jacksonnn.guilds.commands;
 
 import com.jacksonnn.guilds.GuildUtils;
-import com.jacksonnn.guilds.configuration.ConfigManager;
-import com.jacksonnn.guilds.storage.DBConnection;
-import java.sql.ResultSet;
-import java.sql.SQLException;
-import java.util.HashMap;
-import java.util.HashSet;
-import java.util.Map;
-import java.util.Set;
-import org.bukkit.ChatColor;
+import com.jacksonnn.guilds.GuildsMain;
+import com.jacksonnn.guilds.commands.subcommands.AdminCommand;
+import java.util.ArrayList;
+import java.util.List;
+import org.bukkit.command.Command;
+import org.bukkit.command.CommandExecutor;
 import org.bukkit.command.CommandSender;
+import org.bukkit.command.TabCompleter;
 import org.bukkit.entity.Player;
 
-public abstract class GuildsCommand implements SubCommand {
+public class GuildsCommand implements CommandExecutor, TabCompleter {
 
-  private final String name;
-  private final String properUse;
-  private final String description;
-  private final String[] aliases;
-  private final String noPermissionMessage;
-  private final String mustBePlayer;
-  public static Set<String> guilds = new HashSet<>();
-  public static Set<String> leaders = new HashSet<>();
+  private List<SubCommand> subCommands = new ArrayList<>();
+  private GuildsMain plugin;
 
-  public static Map<String, GuildsCommand> instances = new HashMap<>();
-
-  public GuildsCommand(String name, String properUse, String description, String[] aliases) {
-    this.name = name;
-    this.properUse = properUse;
-    this.description = description;
-    this.aliases = aliases;
-
-    this.noPermissionMessage =
-        ChatColor.RED + ConfigManager.languageConfig.get().getString("Commands.NoPermission");
-    this.mustBePlayer =
-        ChatColor.RED + ConfigManager.languageConfig.get().getString("Commands.mustBePlayer");
-
-    instances.put(name, this);
+  public GuildsCommand(GuildsMain guildsMain) {
+    this.plugin = guildsMain;
+    registerSubCommands();
   }
 
-  public String getName() {
-    return name;
+  private void registerSubCommands() {
+    subCommands.add(new AdminCommand(plugin));
   }
 
-  public String getProperUse() {
-    return properUse;
-  }
 
-  public String getDescription() {
-    return description;
-  }
-
-  public String[] getAliases() {
-    return aliases;
-  }
-
-  public void help(CommandSender sender, boolean description) {
-    GuildUtils.sendMessage(sender, "error", "Proper Usage: " + properUse);
-    if (description) {
-      sender.sendMessage(ChatColor.YELLOW + this.description);
-    }
-  }
-
-  public boolean hasPermission(CommandSender sender) {
-    if (sender.hasPermission("guilds.command." + name)) {
-      return true;
-    } else {
-      GuildUtils.sendMessage(sender, "error", this.noPermissionMessage);
-      return false;
-    }
-  }
-
-  public boolean inAGuild(String player) {
-    //Coming Soon
-    return true;
-  }
-
-  public boolean isGuildLeader(String player) {
-    if (leaders.contains(player)) {
-      return true;
-    } else {
-      return false;
-    }
-  }
-
-  public static void loadLeaders() {
-    try {
-      while (getGuilds().next()) {
-        leaders.add(getGuilds().getString("leader"));
+  @Override
+  public boolean onCommand(CommandSender sender, Command command, String label, String[] args) {
+    if (args.length >= 1) {
+      if (args[0].equalsIgnoreCase("admin")) {
+        for (SubCommand subCommand : subCommands) {
+          if (subCommand.requiresPlayer()) {
+            if (subCommand.getAliases().contains("admin") || subCommand.getName()
+                .equalsIgnoreCase("admin")) {
+              subCommand.execute(sender, buildArguments(args));
+            }
+          }
+        }
+      } else {
+        if (sender instanceof Player) {
+          Player player = (Player) sender;
+          for (SubCommand subCommand : subCommands) {
+            if (subCommand.requiresPlayer()) {
+              if (subCommand.getAliases().contains(args[0]) || subCommand.getName()
+                  .equalsIgnoreCase(args[0])) {
+                subCommand.execute(player, buildArguments(args));
+              }
+            }
+          }
+        } else {
+          sender.sendMessage(GuildUtils
+              .color(plugin.getConfigManager().getLanguageConfig().get()
+                  .getString("Commands.mustBePlayer")));
+        }
       }
-    } catch (SQLException e) {
-      e.printStackTrace();
-    }
-  }
-
-  public boolean guildExists(String guild) {
-    if (guilds.contains(guild)) {
       return true;
     } else {
-      return false;
+      sender.sendMessage(GuildUtils
+          .color(plugin.getConfigManager().getLanguageConfig().get().getString("invalid-command")));
     }
+    return false;
   }
 
-  public static ResultSet getGuilds() {
-    return DBConnection.sql.readQuery("SELECT * FROM guilds_guilds");
-  }
+  /**
+   * This skips the first arg.
+   *
+   * @param args all the args
+   * @return the new args
+   */
+  private List<String> buildArguments(String[] args) {
+    List<String> bArgs = new ArrayList<>();
+    int i = 0;
+    for (String arg : args) {
+      if (i == 0) {
 
-  public static void loadGuilds() {
-    try {
-      while (getGuilds().next()) {
-        guilds.add(getGuilds().getString("guild"));
+      } else {
+        bArgs.add(arg);
       }
-    } catch (SQLException e) {
-      e.printStackTrace();
+      i++;
     }
+    return bArgs;
   }
 
-  public boolean hasPermission(CommandSender sender, String extra) {
-    if (sender.hasPermission("guilds.command." + name + "." + extra)) {
-      return true;
-    } else {
-      GuildUtils.sendMessage(sender, "error", this.noPermissionMessage);
-      return false;
-    }
-  }
-
-  public boolean correctLength(CommandSender sender, int size, int min, int max) {
-    if (size < min || size > max) {
-      help(sender, false);
-      return false;
-    } else {
-      return true;
-    }
-  }
-
-  public boolean isPlayer(CommandSender sender) {
-    if (sender instanceof Player) {
-      return true;
-    } else {
-      GuildUtils.sendMessage(sender, "error", this.mustBePlayer);
-      return false;
-    }
+  @Override
+  public List<String> onTabComplete(CommandSender sender, Command command, String alias,
+      String[] args) {
+    return null;
   }
 }

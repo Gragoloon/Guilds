@@ -1,9 +1,9 @@
-name: Guilds
+name: GuildsMain
 author: Jacksonnn
 version: BETA v1.0
-main: com.jacksonnn.guilds.Guilds
+main: com.jacksonnn.guilds.GuildsMain
 commands:
   guilds:
     aliases: [g, guild]
     usage: /<command>
-    description: Guilds at it's finest... (Not really)!
+    description: GuildsMain at it's finest... (Not really)!
