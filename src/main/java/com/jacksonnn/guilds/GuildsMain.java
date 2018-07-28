@@ -1,5 +1,6 @@
 package com.jacksonnn.guilds;
 
+import com.jacksonnn.guilds.commands.GuildsCommand;
 import com.jacksonnn.guilds.configuration.ConfigManager;
 import com.jacksonnn.guilds.guilds.GuildManager;
 import com.jacksonnn.guilds.storage.DatabaseManager;
@@ -30,6 +31,9 @@ public class GuildsMain extends JavaPlugin {
       e.printStackTrace();
     }
     configManager = new ConfigManager(this);
+    GuildsCommand guildsCommand = new GuildsCommand(this);
+    getCommand("guilds").setExecutor(guildsCommand);
+    getCommand("guilds").setTabCompleter(guildsCommand);
   }
 
   private void installDatabase() throws SQLException {
