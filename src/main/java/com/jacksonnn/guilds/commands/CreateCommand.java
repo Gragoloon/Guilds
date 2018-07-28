@@ -54,7 +54,8 @@ public class CreateCommand extends GuildsCommand {
                     "'" + sender.getName() + "', " +
                     "'" + guildName + "')");
 
-            guilds.add(guildName);
+            GuildsCommand.guilds.add(guildName);
+            GuildsCommand.leaders.add(leader);
             sender.sendMessage(GeneralMethods.prefixSuccess + "Created the guild (" + guildName + "), with the leader " + leader + " and " + scoins + " coins on " + GeneralMethods
                 .getCurrentDate() + ".");
         }

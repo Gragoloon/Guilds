@@ -76,7 +76,7 @@ public class DBConnection {
 
 			if (!sql.tableExists("guilds_players")) {
 				Guilds.log.info("Creating guilds_players table");
-				String query = "CREATE TABLE `guilds_players` (" + "`uuid` varchar(36) NOT NULL," + "`name` varchar(255) NOT NULL," + "`balance` varchar(255)," + "`previous` varchar(255)," + "`current` varchar(255)," + "`rank` varchar(255)," + "`joined` varchar(255)," + "``last_login varchar(255)," + " PRIMARY KEY (uuid, name));";
+				String query = "CREATE TABLE `guilds_players` (" + "`uuid` varchar(36) NOT NULL," + "`name` varchar(255) NOT NULL," + "`previous` varchar(255)," + "`current` varchar(255)," + "`rank` varchar(255)," + "`joined` varchar(255)," + "``last_login varchar(255)," + " PRIMARY KEY (uuid, name));";
 				sql.modifyQuery(query, false);
 			}
 		}
