@@ -9,7 +9,8 @@ public class DatabaseManager {
   private Database database;
   private GuildsMain plugin;
 
-  public DatabaseManager() {
+  public DatabaseManager(GuildsMain guildsMain) {
+    plugin = guildsMain;
     database = loadDatabase();
   }
 

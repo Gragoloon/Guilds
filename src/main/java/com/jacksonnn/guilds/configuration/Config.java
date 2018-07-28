@@ -1,6 +1,5 @@
 package com.jacksonnn.guilds.configuration;
 
-import com.jacksonnn.guilds.GuildsMain;
 import java.io.File;
 import org.bukkit.configuration.file.FileConfiguration;
 import org.bukkit.configuration.file.YamlConfiguration;
@@ -8,7 +7,6 @@ import org.bukkit.configuration.file.YamlConfiguration;
 public class Config {
 
   private File file;
-  private GuildsMain plugin;
   private FileConfiguration config;
 
   public Config(File file) {
@@ -21,9 +19,7 @@ public class Config {
     if (!file.getParentFile().exists()) {
       try {
         file.getParentFile().mkdir();
-        plugin.getLogger().info("Generating new directory for " + file.getName());
       } catch (Exception e) {
-        plugin.getLogger().info("Failed to generate directory!");
         e.printStackTrace();
       }
     }
@@ -31,9 +27,7 @@ public class Config {
     if (!file.exists()) {
       try {
         file.createNewFile();
-        plugin.getLogger().info("Generating new " + file.getName() + "!");
       } catch (Exception e) {
-        plugin.getLogger().info("Failed to generate " + file.getName() + "!");
       }
     }
   }

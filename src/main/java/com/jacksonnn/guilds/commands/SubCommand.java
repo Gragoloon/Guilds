@@ -40,8 +40,6 @@ public interface SubCommand {
   /**
    * @return does it require a player
    */
-  public boolean requiresPlayer();
-
   /**
    * Executes the command.
    *
@@ -50,11 +48,4 @@ public interface SubCommand {
    */
   public void execute(CommandSender sender, List<String> args);
 
-  /**
-   * Executes the command.
-   *
-   * @param player The CommandSender who issued the command
-   * @param args the command's arguments
-   */
-  public void execute(Player player, List<String> args);
 }

@@ -1,15 +1,14 @@
 package com.jacksonnn.guilds.commands;
 
-import com.jacksonnn.guilds.GuildUtils;
 import com.jacksonnn.guilds.GuildsMain;
 import com.jacksonnn.guilds.commands.subcommands.AdminCommand;
+import com.jacksonnn.guilds.commands.subcommands.InfoCommand;
 import java.util.ArrayList;
 import java.util.List;
 import org.bukkit.command.Command;
 import org.bukkit.command.CommandExecutor;
 import org.bukkit.command.CommandSender;
 import org.bukkit.command.TabCompleter;
-import org.bukkit.entity.Player;
 
 public class GuildsCommand implements CommandExecutor, TabCompleter {
 
@@ -23,44 +22,27 @@ public class GuildsCommand implements CommandExecutor, TabCompleter {
 
   private void registerSubCommands() {
     subCommands.add(new AdminCommand(plugin));
+    subCommands.add(new InfoCommand(plugin));
   }
 
 
   @Override
   public boolean onCommand(CommandSender sender, Command command, String label, String[] args) {
+
     if (args.length >= 1) {
-      if (args[0].equalsIgnoreCase("admin")) {
-        for (SubCommand subCommand : subCommands) {
-          if (subCommand.requiresPlayer()) {
-            if (subCommand.getAliases().contains("admin") || subCommand.getName()
-                .equalsIgnoreCase("admin")) {
-              subCommand.execute(sender, buildArguments(args));
-            }
-          }
-        }
-      } else {
-        if (sender instanceof Player) {
-          Player player = (Player) sender;
-          for (SubCommand subCommand : subCommands) {
-            if (subCommand.requiresPlayer()) {
-              if (subCommand.getAliases().contains(args[0]) || subCommand.getName()
-                  .equalsIgnoreCase(args[0])) {
-                subCommand.execute(player, buildArguments(args));
-              }
-            }
-          }
-        } else {
-          sender.sendMessage(GuildUtils
-              .color(plugin.getConfigManager().getLanguageConfig().get()
-                  .getString("Commands.mustBePlayer")));
+
+      for (SubCommand subCommand : subCommands) {
+        if (subCommand.getAliases().contains(args[0]) || subCommand.getName()
+            .equalsIgnoreCase(args[0])) {
+          subCommand.execute(sender, buildArguments(args));
+          return true;
         }
       }
-      return true;
+      sender.sendMessage("Invalid Command");
     } else {
-      sender.sendMessage(GuildUtils
-          .color(plugin.getConfigManager().getLanguageConfig().get().getString("invalid-command")));
+      sender.sendMessage("Not Enough Args");
     }
-    return false;
+    return true;
   }
 
   /**

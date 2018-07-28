@@ -5,40 +5,47 @@ import com.jacksonnn.guilds.commands.SubCommand;
 import java.util.ArrayList;
 import java.util.List;
 import org.bukkit.command.CommandSender;
+import org.bukkit.entity.Player;
 
-public class AdminCommand implements SubCommand {
+public class InfoCommand implements SubCommand {
 
   private GuildsMain plugin;
 
-  public AdminCommand(GuildsMain plugin) {
+  public InfoCommand(GuildsMain plugin) {
     this.plugin = plugin;
   }
 
   @Override
   public String getName() {
-    return "admin";
+    return "info";
   }
 
   @Override
   public List<String> getAliases() {
     List<String> aliases = new ArrayList<>();
-    aliases.add("a");
+    aliases.add("about");
     return aliases;
   }
 
   @Override
   public String getProperUse() {
-    return "/guilds admin";
+    return "/guilds info";
   }
 
   @Override
   public String getDescription() {
-    return "The Admin Command";
+    return "The Info extension";
   }
+
 
   @Override
   public void execute(CommandSender sender, List<String> args) {
-    sender.sendMessage("Welcome to the admin  Command.");
+    if (sender instanceof Player) {
+      sender.sendMessage("Hi");
+      return;
+    }
+    sender.sendMessage("You must be a player");
+
   }
 
 }

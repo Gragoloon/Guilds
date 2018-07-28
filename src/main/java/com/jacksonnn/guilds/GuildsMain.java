@@ -16,6 +16,9 @@ public class GuildsMain extends JavaPlugin {
   private GuildManager guildManager;
 
   public void onEnable() {
+    configManager = new ConfigManager(this);
+
+    databaseManager = new DatabaseManager(this);
     try {
       databaseManager.init();
     } catch (SQLException e) {
@@ -30,7 +33,6 @@ public class GuildsMain extends JavaPlugin {
     } catch (SQLException e) {
       e.printStackTrace();
     }
-    configManager = new ConfigManager(this);
     GuildsCommand guildsCommand = new GuildsCommand(this);
     getCommand("guilds").setExecutor(guildsCommand);
     getCommand("guilds").setTabCompleter(guildsCommand);
