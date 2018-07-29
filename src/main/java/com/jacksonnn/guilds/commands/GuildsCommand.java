@@ -3,6 +3,8 @@ package com.jacksonnn.guilds.commands;
 import com.jacksonnn.guilds.GuildUtils;
 import com.jacksonnn.guilds.GuildsMain;
 import com.jacksonnn.guilds.commands.subcommands.AdminCommand;
+import com.jacksonnn.guilds.commands.subcommands.CreateCommand;
+import com.jacksonnn.guilds.commands.subcommands.HelpCommand;
 import com.jacksonnn.guilds.commands.subcommands.InfoCommand;
 import java.util.ArrayList;
 import java.util.List;
@@ -24,6 +26,8 @@ public class GuildsCommand implements CommandExecutor, TabCompleter {
   private void registerSubCommands() {
     subCommands.add(new AdminCommand(plugin));
     subCommands.add(new InfoCommand(plugin));
+    subCommands.add(new HelpCommand(plugin));
+    subCommands.add(new CreateCommand(plugin));
   }
 
 

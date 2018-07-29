@@ -15,7 +15,7 @@ public class ListenersOne implements Listener {
 
   @EventHandler
   public void onJoin(PlayerJoinEvent e) {
-    if (!e.getPlayer().hasPlayedBefore()) {
+    if (!plugin.getGuildManager().hasUser(e.getPlayer().getUniqueId())) {
       plugin.getGuildManager().createUser(e.getPlayer().getUniqueId());
     }
   }

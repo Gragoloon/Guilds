@@ -12,8 +12,8 @@ public class HelpCommand implements SubCommand {
 
   private GuildsMain guildsMain;
 
-  public GuildsMain getGuildsMain() {
-    return guildsMain;
+  public HelpCommand(GuildsMain guildsMain) {
+    this.guildsMain = guildsMain;
   }
 
   @Override

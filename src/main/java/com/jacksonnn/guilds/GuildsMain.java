@@ -29,11 +29,13 @@ public class GuildsMain extends JavaPlugin {
       e.printStackTrace();
       getServer().getPluginManager().disablePlugin(this);
     }
+
     try {
       installDatabase();
     } catch (SQLException e) {
       e.printStackTrace();
     }
+    guildManager = new GuildManager(this);
     GuildsCommand guildsCommand = new GuildsCommand(this);
     getCommand("guilds").setExecutor(guildsCommand);
     getCommand("guilds").setTabCompleter(guildsCommand);

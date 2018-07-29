@@ -46,7 +46,7 @@ public class CreateCommand implements SubCommand {
       if (args.get(0).equalsIgnoreCase("other")) {
         //Create guild as other as owner
         String user = args.get(1);
-        String name = GuildUtils.getMessage((String[]) args.toArray(), 2);
+        String name = GuildUtils.getMessage(args, 2);
         Player player = Bukkit.getPlayer(user);
         if (player == null) {
           sender.sendMessage(GuildUtils.color(
@@ -61,25 +61,34 @@ public class CreateCommand implements SubCommand {
           return;
         }
         guildsMain.getGuildManager().createGuild(player.getUniqueId(), name);
-      } else {
-        if (sender instanceof Player) {
-          Player player = (Player) sender;
-          if (guildsMain.getGuildManager().hasGuild(player.getUniqueId())) {
-            sender.sendMessage(GuildUtils.color(
-                guildsMain.getConfigManager().getLanguageConfig().get()
-                    .getString("already-apart-of-guild.player")));
-            return;
-          }
-
-        } else {
-          //Commands.mustBePlayer
-          sender.sendMessage(GuildUtils.color(
-              guildsMain.getConfigManager().getLanguageConfig().get()
-                  .getString("Commands.mustBePlayer")));
-        }
+        sender.sendMessage(GuildUtils.color(
+            guildsMain.getConfigManager().getLanguageConfig().get()
+                .getString("created-guild.other")));
+        return;
       }
-
     }
+    if (sender instanceof Player) {
+      Player player = (Player) sender;
+      if (guildsMain.getGuildManager().hasGuild(player.getUniqueId())) {
+        sender.sendMessage(GuildUtils.color(
+            guildsMain.getConfigManager().getLanguageConfig().get()
+                .getString("already-apart-of-guild.player")));
+        return;
+      }
+      String name = GuildUtils.getMessage(args, 0);
+
+      guildsMain.getGuildManager().createGuild(player.getUniqueId(), name);
+      player.sendMessage(GuildUtils.color(
+          guildsMain.getConfigManager().getLanguageConfig().get()
+              .getString("created-guild.player")));
+    } else {
+      //Commands.mustBePlayer
+      sender.sendMessage(GuildUtils.color(
+          guildsMain.getConfigManager().getLanguageConfig().get()
+              .getString("Commands.mustBePlayer")));
+    }
+
+
   }
 }
 

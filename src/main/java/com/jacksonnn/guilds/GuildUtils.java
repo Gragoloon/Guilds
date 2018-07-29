@@ -3,6 +3,7 @@ package com.jacksonnn.guilds;
 import java.text.DateFormat;
 import java.text.SimpleDateFormat;
 import java.util.Date;
+import java.util.List;
 import org.bukkit.ChatColor;
 import org.bukkit.command.CommandSender;
 
@@ -45,16 +46,17 @@ public class GuildUtils {
   }
 
 
-    public static String getMessage(final String[] args, final int start) {
-      final StringBuilder bldr = new StringBuilder();
-      for (int i = start; i < args.length; i++) {
-        if (i != start) {
-          bldr.append(" ");
+  public static String getMessage(final List<String> args, final int start) {
+    final StringBuilder bldr = new StringBuilder();
 
-        }
-        bldr.append(args[i]);
+    for (int i = start; i < args.size(); i++) {
+      if (i != start) {
+        bldr.append(" ");
+
       }
-      return bldr.toString();
+      bldr.append(args.get(i));
     }
-
+    return bldr.toString();
   }
+
+}

@@ -1,7 +1,7 @@
 package com.jacksonnn.guilds.storage;
 
 public enum SqlQueries {
-  CREATE_GUILDS("CREATE TABLE `guilds` ("
+  CREATE_GUILDS("CREATE TABLE IF NOT EXISTS `guilds` ("
       + "`id` INT NOT NULL AUTO_INCREMENT,"
       + "`leader` TEXT NOT NULL,"
       + "`claimed` TEXT,"
@@ -11,7 +11,7 @@ public enum SqlQueries {
       + "`allies` TEXT,"
       + "`name` TEXT NOT NULL,"
       + "PRIMARY KEY (`id`)"
-      + ");", "CREATE TABLE guilds ("
+      + ");", "CREATE TABLE IF NOT EXISTS guilds ("
       + "id integer PRIMARY KEY AUTOINCREMENT,"
       + "leader text,"
       + "claimed text,"
@@ -22,14 +22,14 @@ public enum SqlQueries {
       + "name text"
       + ");"),
 
-  CREATE_USERS("CREATE TABLE `users` ("
+  CREATE_USERS("CREATE TABLE IF NOT EXISTS `users` ("
       + "`id` INT NOT NULL AUTO_INCREMENT,"
       + "`uuid` TEXT NOT NULL,"
       + "`current_guild` TEXT,"
       + "`guilds_previous` TEXT,"
       + "`rank` TEXT,"
       + "PRIMARY KEY (`id`)"
-      + ");", "CREATE TABLE users ("
+      + ");", "CREATE TABLE IF NOT EXISTS users ("
       + "id integer PRIMARY KEY AUTOINCREMENT,"
       + "uuid text,"
       + "current_guild text,"
@@ -38,15 +38,19 @@ public enum SqlQueries {
       + ");"),
 
   CREATE_GUILD(
-      "INSERT INTO `guilds` (leader, balance, name) VALUES ?,?,?",
-      "INSERT INTO guilds (leader, balance, name) VALUES ?,?,?"),
+      "INSERT INTO `guilds` (leader, balance, name) VALUES (?,?,?)",
+      "INSERT INTO guilds (leader, balance, name) VALUES (?,?,?)"),
   CREATE_USER(
-      "INSERT INTO `users` (uuid) VALUES ?",
-      "INSERT INTO users (uuid) VALUES ?"),
+      "INSERT INTO `users` (uuid) VALUES (?)",
+      "INSERT INTO users (uuid) VALUES (?)"),
 
   SELECT_USER(
       "SELECT * FROM `users` WHERE uuid=?",
-      "SELECT * FROM users WHERE uuid=?");
+      "SELECT * FROM users WHERE uuid=?"),
+
+  SELECT_GUILD_OWNER(
+      "SELECT * FROM `guilds` WHERE leader=?",
+      "SELECT * FROM guilds WHERE leader=?");
 
   private String mysqlQuery;
   private String sqliteQuery;

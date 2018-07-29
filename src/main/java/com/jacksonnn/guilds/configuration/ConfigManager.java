@@ -42,6 +42,8 @@ public class ConfigManager {
       lang.addDefault("already-apart-of-guild.other",
           "&6Sorry that user is already apart of an guild");
       lang.addDefault("already-apart-of-guild.player", "&6Sorry You are already apart of an group");
+      lang.addDefault("created-guild.other", "&6Created an Guild");
+      lang.addDefault("created-guild.player", "&6You now own a guild");
 
       lang.addDefault("Commands.NoPermission", "You do not have permission to do that.");
       lang.addDefault("Commands.mustBePlayer", "The executor of the command must be a player.");
@@ -60,9 +62,9 @@ public class ConfigManager {
 
       config.addDefault("Storage.settings.host", "localhost");
       config.addDefault("Storage.settings.port", 3306);
-      config.addDefault("Storage.settings.pass", "");
-      config.addDefault("Storage.settings.db", "minecraft");
-      config.addDefault("Storage.settings.user", "root");
+      config.addDefault("Storage.settings.password", "");
+      config.addDefault("Storage.settings.database", "minecraft");
+      config.addDefault("Storage.settings.username", "root");
       config.addDefault("Storage.settings.ssl", false);
 
       config.addDefault("Storage.settings.path", "db.sql");
