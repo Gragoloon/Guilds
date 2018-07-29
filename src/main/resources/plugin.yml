@@ -6,4 +6,4 @@ commands:
   guilds:
     aliases: [g, guild]
     usage: /<command>
-    description: GuildsMain at it's finest... (Not really)!
+    description: Guilds at it's finest... (Not really)!
