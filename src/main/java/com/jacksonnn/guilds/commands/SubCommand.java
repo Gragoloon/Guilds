@@ -2,7 +2,6 @@ package com.jacksonnn.guilds.commands;
 
 import java.util.List;
 import org.bukkit.command.CommandSender;
-import org.bukkit.entity.Player;
 
 /**
  * Interface representation of a command executor.
@@ -47,5 +46,6 @@ public interface SubCommand {
    * @param args the command's arguments
    */
   public void execute(CommandSender sender, List<String> args);
+
 
 }

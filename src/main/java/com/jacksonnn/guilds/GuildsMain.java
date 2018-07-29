@@ -3,6 +3,7 @@ package com.jacksonnn.guilds;
 import com.jacksonnn.guilds.commands.GuildsCommand;
 import com.jacksonnn.guilds.configuration.ConfigManager;
 import com.jacksonnn.guilds.guilds.GuildManager;
+import com.jacksonnn.guilds.listeners.ListenersOne;
 import com.jacksonnn.guilds.storage.DatabaseManager;
 import com.jacksonnn.guilds.storage.Mysql;
 import com.jacksonnn.guilds.storage.SqlQueries;
@@ -36,6 +37,7 @@ public class GuildsMain extends JavaPlugin {
     GuildsCommand guildsCommand = new GuildsCommand(this);
     getCommand("guilds").setExecutor(guildsCommand);
     getCommand("guilds").setTabCompleter(guildsCommand);
+    getServer().getPluginManager().registerEvents(new ListenersOne(this), this);
   }
 
   private void installDatabase() throws SQLException {

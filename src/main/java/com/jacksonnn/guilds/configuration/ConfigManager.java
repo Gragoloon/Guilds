@@ -37,7 +37,11 @@ public class ConfigManager {
       lang.addDefault("Commands.Remove.Description", "&6Remove Description");
       lang.addDefault("Commands.Trust.Description", "&6Trust Description");
       lang.addDefault("Commands.Unclaim.Description", "&6Unclaim Description");
-      lang.addDefault("invalid-command", "&6Please run /help for a commands");
+      lang.addDefault("invalid-command", "&6Please run /guilds help for a commands");
+      lang.addDefault("user-must-be-online", "&6Sorry your user must be online");
+      lang.addDefault("already-apart-of-guild.other",
+          "&6Sorry that user is already apart of an guild");
+      lang.addDefault("already-apart-of-guild.player", "&6Sorry You are already apart of an group");
 
       lang.addDefault("Commands.NoPermission", "You do not have permission to do that.");
       lang.addDefault("Commands.mustBePlayer", "The executor of the command must be a player.");

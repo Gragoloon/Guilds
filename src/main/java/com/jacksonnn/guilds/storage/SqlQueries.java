@@ -4,11 +4,11 @@ public enum SqlQueries {
   CREATE_GUILDS("CREATE TABLE `guilds` ("
       + "`id` INT NOT NULL AUTO_INCREMENT,"
       + "`leader` TEXT NOT NULL,"
-      + "`claimed` TEXT NOT NULL,"
-      + "`members` TEXT NOT NULL,"
+      + "`claimed` TEXT,"
+      + "`members` TEXT,"
       + "`balance` INT NOT NULL,"
-      + "`mods` TEXT NOT NULL,"
-      + "`alies` TEXT NOT NULL,"
+      + "`mods` TEXT,"
+      + "`allies` TEXT,"
       + "`name` TEXT NOT NULL,"
       + "PRIMARY KEY (`id`)"
       + ");", "CREATE TABLE guilds ("
@@ -18,16 +18,16 @@ public enum SqlQueries {
       + "members text,"
       + "balance integer,"
       + "mods text,"
-      + "alies text,"
+      + "allies text,"
       + "name text"
       + ");"),
 
   CREATE_USERS("CREATE TABLE `users` ("
       + "`id` INT NOT NULL AUTO_INCREMENT,"
       + "`uuid` TEXT NOT NULL,"
-      + "`current_guild` TEXT NOT NULL,"
-      + "`guilds_previous` TEXT NOT NULL,"
-      + "`rank` TEXT NOT NULL,"
+      + "`current_guild` TEXT,"
+      + "`guilds_previous` TEXT,"
+      + "`rank` TEXT,"
       + "PRIMARY KEY (`id`)"
       + ");", "CREATE TABLE users ("
       + "id integer PRIMARY KEY AUTOINCREMENT,"
@@ -35,8 +35,18 @@ public enum SqlQueries {
       + "current_guild text,"
       + "guilds_previous text,"
       + "rank text"
-      + ");");
+      + ");"),
 
+  CREATE_GUILD(
+      "INSERT INTO `guilds` (leader, balance, name) VALUES ?,?,?",
+      "INSERT INTO guilds (leader, balance, name) VALUES ?,?,?"),
+  CREATE_USER(
+      "INSERT INTO `users` (uuid) VALUES ?",
+      "INSERT INTO users (uuid) VALUES ?"),
+
+  SELECT_USER(
+      "SELECT * FROM `users` WHERE uuid=?",
+      "SELECT * FROM users WHERE uuid=?");
 
   private String mysqlQuery;
   private String sqliteQuery;
@@ -45,6 +55,7 @@ public enum SqlQueries {
     this.mysqlQuery = mysqlQuery;
     this.sqliteQuery = sqliteQuery;
   }
+
 
   public String getMysqlQuery() {
     return mysqlQuery;

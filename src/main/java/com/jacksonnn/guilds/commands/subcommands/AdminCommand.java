@@ -33,7 +33,8 @@ public class AdminCommand implements SubCommand {
 
   @Override
   public String getDescription() {
-    return "The Admin Command";
+    return plugin.getConfigManager().getLanguageConfig().get()
+        .getString("Commands.Info.Description");
   }
 
   @Override

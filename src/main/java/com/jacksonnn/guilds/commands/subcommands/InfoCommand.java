@@ -34,7 +34,8 @@ public class InfoCommand implements SubCommand {
 
   @Override
   public String getDescription() {
-    return "The Info extension";
+    return plugin.getConfigManager().getLanguageConfig().get()
+        .getString("Commands.Admin.Description");
   }
 
 

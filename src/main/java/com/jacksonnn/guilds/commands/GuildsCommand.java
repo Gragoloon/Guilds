@@ -1,5 +1,6 @@
 package com.jacksonnn.guilds.commands;
 
+import com.jacksonnn.guilds.GuildUtils;
 import com.jacksonnn.guilds.GuildsMain;
 import com.jacksonnn.guilds.commands.subcommands.AdminCommand;
 import com.jacksonnn.guilds.commands.subcommands.InfoCommand;
@@ -38,9 +39,11 @@ public class GuildsCommand implements CommandExecutor, TabCompleter {
           return true;
         }
       }
-      sender.sendMessage("Invalid Command");
+      sender.sendMessage(GuildUtils
+          .color(plugin.getConfigManager().getLanguageConfig().get().getString("invalid-command")));
     } else {
-      sender.sendMessage("Not Enough Args");
+      sender.sendMessage(GuildUtils
+          .color(plugin.getConfigManager().getLanguageConfig().get().getString("invalid-command")));
     }
     return true;
   }
