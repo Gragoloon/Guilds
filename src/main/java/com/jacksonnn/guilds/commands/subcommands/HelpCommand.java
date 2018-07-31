@@ -44,10 +44,10 @@ public class HelpCommand implements SubCommand {
   public void execute(CommandSender sender, List<String> args) {
     GuildUtils.sendMessage(sender, GuildUtils.Prefix.prefixNormal, "Guilds Command Help");
     GuildUtils.sendMessage(sender, GuildUtils.Prefix.prefixNormal, "Aliases: /g, /guild, /guilds");
-    sender.sendMessage(ChatColor.YELLOW + "/guilds help - " + guildsMain.getConfigManager().getLanguageConfig().get().getString("Commands.Help.Description"));
-    sender.sendMessage(ChatColor.YELLOW + "/guilds admin - " + guildsMain.getConfigManager().getLanguageConfig().get().getString("Commands.Admin.Description"));
-    sender.sendMessage(ChatColor.YELLOW + "/guilds create - " + guildsMain.getConfigManager().getLanguageConfig().get().getString("Commands.Create.Description"));
-    sender.sendMessage(ChatColor.YELLOW + "/guilds info - " + guildsMain.getConfigManager().getLanguageConfig().get().getString("Commands.Info.Description"));
+    sender.sendMessage(ChatColor.YELLOW + "/guilds help - " + GuildUtils.color(guildsMain.getConfigManager().getLanguageConfig().get().getString("Commands.Help.Description")));
+    sender.sendMessage(ChatColor.YELLOW + "/guilds admin - " + GuildUtils.color(guildsMain.getConfigManager().getLanguageConfig().get().getString("Commands.Admin.Description")));
+    sender.sendMessage(ChatColor.YELLOW + "/guilds create - " + GuildUtils.color(guildsMain.getConfigManager().getLanguageConfig().get().getString("Commands.Create.Description")));
+    sender.sendMessage(ChatColor.YELLOW + "/guilds info - " + GuildUtils.color(guildsMain.getConfigManager().getLanguageConfig().get().getString("Commands.Info.Description")));
   }
 
 }
