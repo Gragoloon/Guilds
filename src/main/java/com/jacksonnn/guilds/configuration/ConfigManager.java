@@ -21,32 +21,20 @@ public class ConfigManager {
       FileConfiguration lang;
       lang = languageConfig.get();
 
-      lang.addDefault("Commands.Add.Description", "&6Add Description");
       lang.addDefault("Commands.Admin.Description", "&6Admin Description");
-      lang.addDefault("Commands.Attack.Description", "&6AttackDescription");
-      lang.addDefault("Commands.Chat.Description", "&6Chat Description");
-      lang.addDefault("Commands.Claim.Description", "&6Claim Description");
-      lang.addDefault("Commands.Coins.Description", "&6Coins Description");
       lang.addDefault("Commands.Create.Description", "&6Create Description");
-      lang.addDefault("Commands.Delete.Description", "&6Delete Description");
       lang.addDefault("Commands.Help.Description", "&6Help Description");
       lang.addDefault("Commands.Info.Description", "&6Info Description");
-      lang.addDefault("Commands.Invite.Description", "&6Invite Description");
-      lang.addDefault("Commands.Job.Description", "&6Job Description");
-      lang.addDefault("Commands.Kick.Description", "&6Kick Description");
-      lang.addDefault("Commands.Remove.Description", "&6Remove Description");
-      lang.addDefault("Commands.Trust.Description", "&6Trust Description");
-      lang.addDefault("Commands.Unclaim.Description", "&6Unclaim Description");
-      lang.addDefault("invalid-command", "&6Please run /guilds help for a commands");
-      lang.addDefault("user-must-be-online", "&6Sorry your user must be online");
-      lang.addDefault("already-apart-of-guild.other",
-          "&6Sorry that user is already apart of an guild");
-      lang.addDefault("already-apart-of-guild.player", "&6Sorry You are already apart of an group");
-      lang.addDefault("created-guild.other", "&6Created an Guild");
-      lang.addDefault("created-guild.player", "&6You now own a guild");
 
-      lang.addDefault("Commands.NoPermission", "You do not have permission to do that.");
-      lang.addDefault("Commands.mustBePlayer", "The executor of the command must be a player.");
+      lang.addDefault("Error.NoPermission", "You do not have permission to do that.");
+      lang.addDefault("Error.MustBePlayer", "The executor of the command must be a player.");
+      lang.addDefault("Error.InvalidCommand", "&6Please run /guilds help for a commands");
+      lang.addDefault("Error.UserMustBeOnline", "&6Sorry your user must be online");
+      lang.addDefault("Error.AlreadyApartOfGuild.Other", "&6Sorry that user is already apart of a guild");
+      lang.addDefault("Error.AlreadyApartOfGuild.Player", "&6Sorry You are already apart of a guild");
+
+      lang.addDefault("Success.CreatedGuild.Other", "&6Created a Guild");
+      lang.addDefault("Success.CreatedGuild.Player", "&6You now own a guild");
 
       lang.addDefault("General.prefix", "&8[&2Guilds&8]&f ");
 

@@ -13,7 +13,7 @@ public class GuildUtils {
     prefixNormal(
         ChatColor.DARK_GRAY + "[" + ChatColor.GREEN + "GuildsMain" + ChatColor.DARK_GRAY + "] "
             + ChatColor.YELLOW),
-    prfixError("[" + ChatColor.GREEN + "GuildsMain" + ChatColor.DARK_GRAY + "] "
+    prefixError("[" + ChatColor.GREEN + "GuildsMain" + ChatColor.DARK_GRAY + "] "
         + ChatColor.DARK_RED + "Error! " + ChatColor.RED),
     prefixSuccess(
         ChatColor.DARK_GRAY + "[" + ChatColor.GREEN + "GuildsMain" + ChatColor.DARK_GRAY + "] "

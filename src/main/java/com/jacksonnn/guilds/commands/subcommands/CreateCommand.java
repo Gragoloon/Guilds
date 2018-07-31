@@ -36,8 +36,7 @@ public class CreateCommand implements SubCommand {
 
   @Override
   public String getDescription() {
-    return guildsMain.getConfigManager().getLanguageConfig().get()
-        .getString("Commands.Create.Description");
+    return guildsMain.getConfigManager().getLanguageConfig().get().getString("Commands.Create.Description");
   }
 
   @Override
@@ -49,43 +48,29 @@ public class CreateCommand implements SubCommand {
         String name = GuildUtils.getMessage(args, 2);
         Player player = Bukkit.getPlayer(user);
         if (player == null) {
-          sender.sendMessage(GuildUtils.color(
-              guildsMain.getConfigManager().getLanguageConfig().get()
-                  .getString("user-must-be-online")));
+          sender.sendMessage(GuildUtils.Prefix.prefixError + GuildUtils.color(guildsMain.getConfigManager().getLanguageConfig().get().getString("Error.UserMustBeOnline")));
           return;
         }
-        if (guildsMain.getGuildManager().hasGuild(player.getUniqueId())) {
-          sender.sendMessage(GuildUtils.color(
-              guildsMain.getConfigManager().getLanguageConfig().get()
-                  .getString("already-apart-of-guild.other")));
+        if (guildsMain.getGuildManager().hasGuild(player.getUniqueId())) { sender.sendMessage(GuildUtils.Prefix.prefixError + GuildUtils.color(guildsMain.getConfigManager().getLanguageConfig().get().getString("already-apart-of-guild.other")));
           return;
         }
         guildsMain.getGuildManager().createGuild(player.getUniqueId(), name);
-        sender.sendMessage(GuildUtils.color(
-            guildsMain.getConfigManager().getLanguageConfig().get()
-                .getString("created-guild.other")));
+        sender.sendMessage(GuildUtils.Prefix.prefixSuccess + GuildUtils.color(guildsMain.getConfigManager().getLanguageConfig().get().getString("Success.CreatedGuild.Other")));
         return;
       }
     }
     if (sender instanceof Player) {
       Player player = (Player) sender;
       if (guildsMain.getGuildManager().hasGuild(player.getUniqueId())) {
-        sender.sendMessage(GuildUtils.color(
-            guildsMain.getConfigManager().getLanguageConfig().get()
-                .getString("already-apart-of-guild.player")));
+        sender.sendMessage(GuildUtils.Prefix.prefixError + GuildUtils.color(guildsMain.getConfigManager().getLanguageConfig().get().getString("Error.AlreadyApartOfGuild.Player")));
         return;
       }
       String name = GuildUtils.getMessage(args, 0);
 
       guildsMain.getGuildManager().createGuild(player.getUniqueId(), name);
-      player.sendMessage(GuildUtils.color(
-          guildsMain.getConfigManager().getLanguageConfig().get()
-              .getString("created-guild.player")));
+      player.sendMessage(GuildUtils.Prefix.prefixNormal + GuildUtils.color(guildsMain.getConfigManager().getLanguageConfig().get().getString("Success.CreatedGuild.Player")));
     } else {
-      //Commands.mustBePlayer
-      sender.sendMessage(GuildUtils.color(
-          guildsMain.getConfigManager().getLanguageConfig().get()
-              .getString("Commands.mustBePlayer")));
+      sender.sendMessage(GuildUtils.Prefix.prefixError + GuildUtils.color(guildsMain.getConfigManager().getLanguageConfig().get().getString("Error.MustBePlayer")));
     }
 
 
