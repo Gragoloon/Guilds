@@ -37,17 +37,14 @@ public class GuildsCommand implements CommandExecutor, TabCompleter {
     if (args.length >= 1) {
 
       for (SubCommand subCommand : subCommands) {
-        if (subCommand.getAliases().contains(args[0]) || subCommand.getName()
-            .equalsIgnoreCase(args[0])) {
+        if (subCommand.getAliases().contains(args[0]) || subCommand.getName().equalsIgnoreCase(args[0])) {
           subCommand.execute(sender, buildArguments(args));
           return true;
         }
       }
-      sender.sendMessage(GuildUtils
-          .color(plugin.getConfigManager().getLanguageConfig().get().getString("invalid-command")));
+      GuildUtils.sendMessage(sender, GuildUtils.Prefix.prefixError, GuildUtils.color(plugin.getConfigManager().getLanguageConfig().get().getString("Error.InvalidCommand")));
     } else {
-      sender.sendMessage(GuildUtils
-          .color(plugin.getConfigManager().getLanguageConfig().get().getString("invalid-command")));
+      GuildUtils.sendMessage(sender, GuildUtils.Prefix.prefixError, GuildUtils.color(plugin.getConfigManager().getLanguageConfig().get().getString("Error.InvalidCommand")));
     }
     return true;
   }

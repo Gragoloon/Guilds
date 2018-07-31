@@ -34,18 +34,13 @@ public class InfoCommand implements SubCommand {
 
   @Override
   public String getDescription() {
-    return plugin.getConfigManager().getLanguageConfig().get()
-        .getString("Commands.Admin.Description");
+    return plugin.getConfigManager().getLanguageConfig().get().getString("Commands.Admin.Description");
   }
 
 
   @Override
   public void execute(CommandSender sender, List<String> args) {
-    if (sender instanceof Player) {
-      sender.sendMessage("Hi");
-      return;
-    }
-    sender.sendMessage("You must be a player");
+
 
   }
 

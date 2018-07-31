@@ -21,22 +21,20 @@ public class ConfigManager {
       FileConfiguration lang;
       lang = languageConfig.get();
 
-      lang.addDefault("Commands.Admin.Description", "&6Admin Description");
-      lang.addDefault("Commands.Create.Description", "&6Create Description");
-      lang.addDefault("Commands.Help.Description", "&6Help Description");
-      lang.addDefault("Commands.Info.Description", "&6Info Description");
+      lang.addDefault("Commands.Admin.Description", "&eAdmin Description");
+      lang.addDefault("Commands.Create.Description", "&eCreate Description");
+      lang.addDefault("Commands.Help.Description", "&eHelp Description");
+      lang.addDefault("Commands.Info.Description", "&eInfo Description");
 
-      lang.addDefault("Error.NoPermission", "You do not have permission to do that.");
-      lang.addDefault("Error.MustBePlayer", "The executor of the command must be a player.");
-      lang.addDefault("Error.InvalidCommand", "&6Please run /guilds help for a commands");
-      lang.addDefault("Error.UserMustBeOnline", "&6Sorry your user must be online");
-      lang.addDefault("Error.AlreadyApartOfGuild.Other", "&6Sorry that user is already apart of a guild");
-      lang.addDefault("Error.AlreadyApartOfGuild.Player", "&6Sorry You are already apart of a guild");
+      lang.addDefault("Error.NoPermission", "&cYou do not have permission to do that.");
+      lang.addDefault("Error.MustBePlayer", "&cThe executor of the command must be a player.");
+      lang.addDefault("Error.InvalidCommand", "&cPlease run /guilds help for a commands.");
+      lang.addDefault("Error.UserMustBeOnline", "&cSorry that user must be online.");
+      lang.addDefault("Error.AlreadyApartOfGuild.Other", "&cSorry that user is already apart of a guild.");
+      lang.addDefault("Error.AlreadyApartOfGuild.Player", "&cSorry You are already apart of a guild.");
 
-      lang.addDefault("Success.CreatedGuild.Other", "&6Created a Guild");
-      lang.addDefault("Success.CreatedGuild.Player", "&6You now own a guild");
-
-      lang.addDefault("General.prefix", "&8[&2Guilds&8]&f ");
+      lang.addDefault("Success.CreatedGuild.Other", "&aCreated a Guild.");
+      lang.addDefault("Success.CreatedGuild.Player", "&aYou now own a guild!");
 
       languageConfig.save();
 

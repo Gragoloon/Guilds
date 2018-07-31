@@ -10,14 +10,9 @@ import org.bukkit.command.CommandSender;
 public class GuildUtils {
 
   public enum Prefix {
-    prefixNormal(
-        ChatColor.DARK_GRAY + "[" + ChatColor.GREEN + "GuildsMain" + ChatColor.DARK_GRAY + "] "
-            + ChatColor.YELLOW),
-    prefixError("[" + ChatColor.GREEN + "GuildsMain" + ChatColor.DARK_GRAY + "] "
-        + ChatColor.DARK_RED + "Error! " + ChatColor.RED),
-    prefixSuccess(
-        ChatColor.DARK_GRAY + "[" + ChatColor.GREEN + "GuildsMain" + ChatColor.DARK_GRAY + "] "
-            + ChatColor.DARK_GREEN + "Success! " + ChatColor.GREEN);
+    prefixNormal(ChatColor.DARK_GRAY + "[" + ChatColor.GREEN + "Guilds" + ChatColor.DARK_GRAY + "] " + ChatColor.YELLOW),
+    prefixError(ChatColor.DARK_GRAY + "[" + ChatColor.GREEN + "Guilds" + ChatColor.DARK_GRAY + "] " + ChatColor.DARK_RED + "Error! " + ChatColor.RED),
+    prefixSuccess(ChatColor.DARK_GRAY + "[" + ChatColor.GREEN + "Guilds" + ChatColor.DARK_GRAY + "] " + ChatColor.DARK_GREEN + "Success! " + ChatColor.GREEN);
 
     private String prefix;
 

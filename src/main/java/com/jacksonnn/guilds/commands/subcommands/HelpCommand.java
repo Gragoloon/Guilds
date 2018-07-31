@@ -5,6 +5,8 @@ import com.jacksonnn.guilds.GuildsMain;
 import com.jacksonnn.guilds.commands.SubCommand;
 import java.util.ArrayList;
 import java.util.List;
+
+import com.jacksonnn.guilds.configuration.ConfigManager;
 import org.bukkit.ChatColor;
 import org.bukkit.command.CommandSender;
 
@@ -40,17 +42,12 @@ public class HelpCommand implements SubCommand {
 
   @Override
   public void execute(CommandSender sender, List<String> args) {
-    sender.sendMessage(GuildUtils.Prefix.prefixNormal.getPrefix() + "Guilds Command Help");
-    sender.sendMessage(GuildUtils.Prefix.prefixNormal.getPrefix() + "Aliases: /g, /guild, /guilds");
-    sender.sendMessage(ChatColor.YELLOW + "/guilds help - Displays this help menu.");
-    sender.sendMessage(ChatColor.YELLOW + "/guilds admin - Description coming soon");
-    sender.sendMessage(ChatColor.YELLOW + "/guilds chat - Description coming soon");
-    sender.sendMessage(ChatColor.YELLOW + "/guilds claim - Description coming soon");
-    sender.sendMessage(ChatColor.YELLOW + "/guilds coins - Description coming soon");
-    sender.sendMessage(ChatColor.YELLOW + "/guilds create - Description coming soon");
-    sender.sendMessage(ChatColor.YELLOW + "/guilds info - Description coming soon");
-    sender.sendMessage(ChatColor.YELLOW + "/guilds job - Description coming soon");
-    sender.sendMessage(ChatColor.YELLOW + "/guilds unclaim - Description coming soon");
+    GuildUtils.sendMessage(sender, GuildUtils.Prefix.prefixNormal, "Guilds Command Help");
+    GuildUtils.sendMessage(sender, GuildUtils.Prefix.prefixNormal, "Aliases: /g, /guild, /guilds");
+    sender.sendMessage(ChatColor.YELLOW + "/guilds help - " + guildsMain.getConfigManager().getLanguageConfig().get().getString("Commands.Help.Description"));
+    sender.sendMessage(ChatColor.YELLOW + "/guilds admin - " + guildsMain.getConfigManager().getLanguageConfig().get().getString("Commands.Admin.Description"));
+    sender.sendMessage(ChatColor.YELLOW + "/guilds create - " + guildsMain.getConfigManager().getLanguageConfig().get().getString("Commands.Create.Description"));
+    sender.sendMessage(ChatColor.YELLOW + "/guilds info - " + guildsMain.getConfigManager().getLanguageConfig().get().getString("Commands.Info.Description"));
   }
 
 }
