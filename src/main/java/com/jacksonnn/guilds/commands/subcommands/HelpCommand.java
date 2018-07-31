@@ -26,6 +26,8 @@ public class HelpCommand implements SubCommand {
   @Override
   public List<String> getAliases() {
     List<String> aliases = new ArrayList<>();
+    aliases.add("?");
+    aliases.add("h");
     return aliases;
   }
 

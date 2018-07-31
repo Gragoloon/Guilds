@@ -25,6 +25,9 @@ public class CreateCommand implements SubCommand {
   @Override
   public List<String> getAliases() {
     List<String> aliases = new ArrayList<>();
+    aliases.add("new");
+    aliases.add("n");
+    aliases.add("start");
     return aliases;
   }
 

@@ -23,6 +23,8 @@ public class AdminCommand implements SubCommand {
   public List<String> getAliases() {
     List<String> aliases = new ArrayList<>();
     aliases.add("a");
+    aliases.add("staff");
+    aliases.add("mod");
     return aliases;
   }
 

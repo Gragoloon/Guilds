@@ -24,6 +24,7 @@ public class InfoCommand implements SubCommand {
   public List<String> getAliases() {
     List<String> aliases = new ArrayList<>();
     aliases.add("about");
+    aliases.add("i");
     return aliases;
   }
 
