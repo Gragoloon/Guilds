@@ -7,11 +7,14 @@ import com.jacksonnn.guilds.storage.SqlQueries;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
+import java.util.ArrayList;
+import java.util.List;
 import java.util.UUID;
 
 public class GuildManager {
 
   private GuildsMain guildsMain;
+  List<String> guilds = new ArrayList<>();
 
   public GuildManager(GuildsMain guildsMain) {
     this.guildsMain = guildsMain;
@@ -112,5 +115,29 @@ public class GuildManager {
     }
 
     return ret;
+  }
+
+  public List<String> getGuilds() {
+    String query;
+    if (guildsMain.getDatabaseManager().getDatabase() instanceof Mysql) {
+      query = SqlQueries.GET_GUILDS.getMysqlQuery();
+    } else {
+      query = SqlQueries.GET_GUILDS.getSqliteQuery();
+    }
+    boolean ret = false;
+    try {
+      PreparedStatement preparedStatement = guildsMain.getDatabaseManager().getDatabase().getConnection().prepareStatement(query);
+      ResultSet getGuilds = preparedStatement.executeQuery();
+
+
+      while (getGuilds.next()) {
+        guilds.add(getGuilds.getString("name"));
+        return guilds;
+      }
+    } catch (SQLException e) {
+      e.printStackTrace();
+    }
+
+    return guilds;
   }
 }

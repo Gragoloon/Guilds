@@ -47,12 +47,12 @@ public class InfoCommand implements SubCommand {
 
   @Override
   public String getProperUse() {
-    return "/guilds info";
+    return "/guilds info <guild/player>";
   }
 
   @Override
   public String getDescription() {
-    return plugin.getConfigManager().getLanguageConfig().get().getString("Commands.Admin.Description");
+    return plugin.getConfigManager().getLanguageConfig().get().getString("Commands.Info.Description");
   }
 
 

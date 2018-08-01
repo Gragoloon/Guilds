@@ -50,7 +50,11 @@ public enum SqlQueries {
 
   SELECT_GUILD_OWNER(
       "SELECT * FROM `guilds` WHERE leader=?",
-      "SELECT * FROM guilds WHERE leader=?");
+      "SELECT * FROM guilds WHERE leader=?"),
+
+  GET_GUILDS(
+      "SELECT * FROM `guilds`",
+      "SELECT * FROM guilds");
 
   private String mysqlQuery;
   private String sqliteQuery;

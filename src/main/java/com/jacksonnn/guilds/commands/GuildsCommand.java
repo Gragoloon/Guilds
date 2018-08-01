@@ -2,10 +2,8 @@ package com.jacksonnn.guilds.commands;
 
 import com.jacksonnn.guilds.GuildUtils;
 import com.jacksonnn.guilds.GuildsMain;
-import com.jacksonnn.guilds.commands.subcommands.AdminCommand;
-import com.jacksonnn.guilds.commands.subcommands.CreateCommand;
-import com.jacksonnn.guilds.commands.subcommands.HelpCommand;
-import com.jacksonnn.guilds.commands.subcommands.InfoCommand;
+import com.jacksonnn.guilds.commands.subcommands.*;
+
 import java.util.ArrayList;
 import java.util.List;
 import org.bukkit.command.Command;
@@ -28,6 +26,7 @@ public class GuildsCommand implements CommandExecutor, TabCompleter {
     subCommands.add(new InfoCommand(plugin));
     subCommands.add(new HelpCommand(plugin));
     subCommands.add(new CreateCommand(plugin));
+    subCommands.add(new ListCommand(plugin));
   }
 
 

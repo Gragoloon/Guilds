@@ -25,6 +25,7 @@ public class ConfigManager {
       lang.addDefault("Commands.Create.Description", "&eCreate Description");
       lang.addDefault("Commands.Help.Description", "&eHelp Description");
       lang.addDefault("Commands.Info.Description", "&eInfo Description");
+      lang.addDefault("Commands.List.Description", "&eList Description");
 
       lang.addDefault("Error.NoPermission", "&cYou do not have permission to do that.");
       lang.addDefault("Error.MustBePlayer", "&cThe executor of the command must be a player.");
