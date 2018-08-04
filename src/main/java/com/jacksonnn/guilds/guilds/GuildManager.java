@@ -230,25 +230,5 @@ public class GuildManager {
     } catch (SQLException e) {
       e.printStackTrace();
     }
-
-    /*
-     public void createUser(UUID createUser) {
-        String query;
-        if (guildsMain.getDatabaseManager().getDatabase() instanceof SqlLite) {
-          query = SqlQueries.CREATE_USER.getSqliteQuery();
-        } else {
-          query = SqlQueries.CREATE_USER.getMysqlQuery();
-        }
-        try {
-          PreparedStatement preparedStatement = guildsMain.getDatabaseManager().getDatabase()
-              .getConnection().prepareStatement(query);
-          preparedStatement.setString(1, createUser.toString());
-          preparedStatement.execute();
-          preparedStatement.close();
-        } catch (SQLException e) {
-          e.printStackTrace();
-        }
-      }
-     */
   }
 }

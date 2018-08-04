@@ -89,16 +89,13 @@ public class InfoCommand implements SubCommand {
 
   public void getMembers(CommandSender sender, String guild) {
       List<String> guildMembers = new ArrayList<>();
+      UUID uuid;
       String playerName;
 
       for (String member : plugin.getGuildManager().getGuildMembers(guild)) {
-          Player player = Bukkit.getServer().getPlayer(member);
+          uuid = UUID.fromString(member);
+          playerName = Bukkit.getPlayer(uuid).getName();
 
-          if (player.isOnline()) {
-              playerName = Bukkit.getPlayer(UUID.fromString(member)).getName();
-          } else {
-              playerName = Bukkit.getOfflinePlayer(UUID.fromString(member)).getName();
-          }
           guildMembers.add(playerName);
       }
 
