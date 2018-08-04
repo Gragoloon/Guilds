@@ -8,11 +8,7 @@
   <component name="ChangeListManager">
     <list default="true" id="2f2e1ac3-7ca1-4aa6-927a-9cc49a2a6e7f" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/jacksonnn/guilds/commands/subcommands/CreateCommand.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/jacksonnn/guilds/commands/subcommands/CreateCommand.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/jacksonnn/guilds/commands/subcommands/InfoCommand.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/jacksonnn/guilds/commands/subcommands/InfoCommand.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/jacksonnn/guilds/commands/subcommands/ListCommand.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/jacksonnn/guilds/commands/subcommands/ListCommand.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/jacksonnn/guilds/guilds/GuildManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/jacksonnn/guilds/guilds/GuildManager.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/jacksonnn/guilds/storage/SqlQueries.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/jacksonnn/guilds/storage/SqlQueries.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/bin/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -39,38 +35,24 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="CreateCommand.java" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/jacksonnn/guilds/commands/subcommands/CreateCommand.java">
+      <file leaf-file-name="InfoCommand.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/jacksonnn/guilds/commands/subcommands/InfoCommand.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="259">
-              <caret line="55" column="9" lean-forward="true" selection-start-line="55" selection-start-column="9" selection-end-line="55" selection-end-column="9" />
+            <state relative-caret-position="483">
+              <caret line="102" column="7" lean-forward="true" selection-start-line="102" selection-start-column="7" selection-end-line="102" selection-end-column="7" />
+              <folding>
+                <element signature="e#0#4175#0" expanded="true" />
+                <element signature="imports" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="GuildManager.java" pinned="false" current-in-tab="false">
+      <file leaf-file-name="GuildManager.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/jacksonnn/guilds/guilds/GuildManager.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="316">
-              <caret line="214" column="10" selection-start-line="214" selection-start-column="4" selection-end-line="214" selection-end-column="10" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="ListenersOne.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/jacksonnn/guilds/listeners/ListenersOne.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="195">
-              <caret line="18" column="31" selection-start-line="18" selection-start-column="31" selection-end-line="18" selection-end-column="31" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="SqlQueries.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/jacksonnn/guilds/storage/SqlQueries.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="497">
-              <caret line="67" selection-start-line="67" selection-end-line="67" />
+            <state relative-caret-position="143">
+              <caret line="220" column="42" selection-start-line="220" selection-start-column="42" selection-end-line="220" selection-end-column="42" />
             </state>
           </provider>
         </entry>
@@ -395,7 +377,7 @@
       <workItem from="1532801314114" duration="532000" />
       <workItem from="1532802342058" duration="2322000" />
       <workItem from="1532805199328" duration="19164000" />
-      <workItem from="1533182602937" duration="6300000" />
+      <workItem from="1533182602937" duration="7141000" />
     </task>
     <task id="LOCAL-00001" summary="BIG COMMIT&#10;&#10;Added Command/SubCommand System:&#10; - All &quot;/guilds&quot; subcommands have their own class and must follow the system.&#10;Created GeneralMethods class.&#10;Updated Guilds.java for new command system.">
       <created>1531874032480</created>
@@ -495,11 +477,18 @@
       <option name="project" value="LOCAL" />
       <updated>1533091490712</updated>
     </task>
-    <option name="localTasksCounter" value="15" />
+    <task id="LOCAL-00015" summary="Created the List Command and did a few extra things&#10;******THERE IS A BUG IN THIS COMMIT******&#10;  SqlQueries.java:&#10;    - Removed the members column from the guilds table.&#10;    - Changed current_guild and guild_previous to guild and previous_guild.&#10;    - Created GET_USERS()&#10;    - Created GET_GUILD_MEMBERS()&#10;    - Created ADD_USER_TO_GUILD()&#10;  GuildManager.java:&#10;    - Created getPlayers().&#10;    - Created getGuildMembers().&#10;    - Created isGuild().&#10;    - Created isPlayer().&#10;    - Created addPlayerToGuild().&#10;  ListCommand.java:&#10;    - Fixed multiples of the same guild error by removing all of the guilds from the ArrayList.&#10;  InfoCommand.java:&#10;    - Added the checks to see if the argument is a player or guild.&#10;    - Created getMembers().&#10;  CreateCommand.java:&#10;    - Added the addPlayerToGuild method.&#10;  BUG IN THIS COMMIT:&#10;      04.08 17:25:21 [Server] INFO Jacksonnn issued server command: /g new test&#10;      04.08 17:25:21 [Server] ERROR null&#10;      04.08 17:25:21 [Server] INFO org.bukkit.command.CommandException: Unhandled exception executing command 'g' in plugin Guilds vBETA v1.0&#10;      04.08 17:25:21 [Server] INFO at org.bukkit.command.PluginCommand.execute(PluginCommand.java:46) ~[spigot-1.12.2_7_12.jar:git-Spigot-642f6d2-57ab4cf]&#10;      04.08 17:25:21 [Server] INFO at org.bukkit.command.SimpleCommandMap.dispatch(SimpleCommandMap.java:141) ~[spigot-1.12.2_7_12.jar:git-Spigot-642f6d2-57ab4cf]&#10;      04.08 17:25:21 [Server] INFO at org.bukkit.craftbukkit.v1_12_R1.CraftServer.dispatchCommand(CraftServer.java:648) ~[spigot-1.12.2_7_12.jar:git-Spigot-642f6d2-57ab4cf]&#10;      04.08 17:25:21 [Server] INFO at net.minecraft.server.v1_12_R1.PlayerConnection.handleCommand(PlayerConnection.java:1397) [spigot-1.12.2_7_12.jar:git-Spigot-642f6d2-57ab4cf]&#10;      04.08 17:25:21 [Server] INFO at net.minecraft.server.v1_12_R1.PlayerConnection.a(PlayerConnection.java:1232) [spigot-1.12.2_7_12.jar:git-Spigot-642f6d2-57ab4cf]&#10;      04.08 17:25:21 [Server] INFO at net.minecraft.server.v1_12_R1.PacketPlayInChat.a(PacketPlayInChat.java:45) [spigot-1.12.2_7_12.jar:git-Spigot-642f6d2-57ab4cf]&#10;      04.08 17:25:21 [Server] INFO at net.minecraft.server.v1_12_R1.PacketPlayInChat.a(PacketPlayInChat.java:1) [spigot-1.12.2_7_12.jar:git-Spigot-642f6d2-57ab4cf]&#10;      04.08 17:25:21 [Server] INFO at net.minecraft.server.v1_12_R1.PlayerConnectionUtils$1.run(SourceFile:13) [spigot-1.12.2_7_12.jar:git-Spigot-642f6d2-57ab4cf]&#10;      04.08 17:25:21 [Server] INFO at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:511) [?:1.8.0_161]&#10;      04.08 17:25:21 [Server] INFO at java.util.concurrent.FutureTask.run(FutureTask.java:266) [?:1.8.0_161]&#10;      04.08 17:25:21 [Server] INFO at net.minecraft.server.v1_12_R1.SystemUtils.a(SourceFile:46) [spigot-1.12.2_7_12.jar:git-Spigot-642f6d2-57ab4cf]&#10;      04.08 17:25:21 [Server] INFO at net.minecraft.server.v1_12_R1.MinecraftServer.D(MinecraftServer.java:748) [spigot-1.12.2_7_12.jar:git-Spigot-642f6d2-57ab4cf]&#10;      04.08 17:25:21 [Server] INFO at net.minecraft.server.v1_12_R1.DedicatedServer.D(DedicatedServer.java:406) [spigot-1.12.2_7_12.jar:git-Spigot-642f6d2-57ab4cf]&#10;      04.08 17:25:21 [Server] INFO at net.minecraft.server.v1_12_R1.MinecraftServer.C(MinecraftServer.java:679) [spigot-1.12.2_7_12.jar:git-Spigot-642f6d2-57ab4cf]&#10;      04.08 17:25:21 [Server] INFO at net.minecraft.server.v1_12_R1.MinecraftServer.run(MinecraftServer.java:577) [spigot-1.12.2_7_12.jar:git-Spigot-642f6d2-57ab4cf]&#10;      04.08 17:25:21 [Server] INFO at java.lang.Thread.run(Thread.java:748) [?:1.8.0_161]&#10;      04.08 17:25:21 [Server] INFO Caused by: java.lang.ArrayIndexOutOfBoundsException: 1&#10;      04.08 17:25:21 [Server] INFO at org.sqlite.core.CorePreparedStatement.batch(CorePreparedStatement.java:121) ~[spigot-1.12.2_7_12.jar:git-Spigot-642f6d2-57ab4cf]&#10;      04.08 17:25:21 [Server] INFO at org.sqlite.jdbc3.JDBC3PreparedStatement.setString(JDBC3PreparedStatement.java:421) ~[spigot-1.12.2_7_12.jar:git-Spigot-642f6d2-57ab4cf]&#10;      04.08 17:25:21 [Server] INFO at com.jacksonnn.guilds.guilds.GuildManager.addPlayerToGuild(GuildManager.java:226) ~[?:?]&#10;      04.08 17:25:21 [Server] INFO at com.jacksonnn.guilds.commands.subcommands.CreateCommand.execute(CreateCommand.java:76) ~[?:?]&#10;      04.08 17:25:21 [Server] INFO at com.jacksonnn.guilds.commands.GuildsCommand.onCommand(GuildsCommand.java:40) ~[?:?]&#10;      04.08 17:25:21 [Server] INFO at org.bukkit.command.PluginCommand.execute(PluginCommand.java:44) ~[spigot-1.12.2_7_12.jar:git-Spigot-642f6d2-57ab4cf]&#10;      04.08 17:25:21 [Server] INFO ... 15 more">
+      <created>1533419951051</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1533419951051</updated>
+    </task>
+    <option name="localTasksCounter" value="16" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="58568000" />
+    <option name="totallyTimeSpent" value="59409000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1280" height="800" extended-state="0" />
@@ -510,7 +499,7 @@
       <window_info anchor="right" id="Palette&#9;" order="3" />
       <window_info id="Image Layers" order="2" />
       <window_info anchor="right" id="Capture Analysis" order="3" />
-      <window_info active="true" anchor="bottom" id="Event Log" order="7" sideWeight="0.50080776" side_tool="true" visible="true" weight="0.0" />
+      <window_info anchor="bottom" id="Event Log" order="7" sideWeight="0.50080776" side_tool="true" weight="0.0" />
       <window_info anchor="right" id="Maven Projects" order="3" />
       <window_info anchor="bottom" id="Database Changes" order="7" show_stripe_button="false" />
       <window_info anchor="bottom" id="Version Control" order="7" />
@@ -518,7 +507,7 @@
       <window_info anchor="bottom" id="Terminal" order="7" />
       <window_info id="Capture Tool" order="2" />
       <window_info id="Designer" order="2" />
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.17689823" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.17689823" />
       <window_info anchor="right" id="Database" order="3" weight="0.32956383" />
       <window_info id="Learn" order="2" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
@@ -588,7 +577,8 @@
     <MESSAGE value="Added aliases to all current commands:&#10; - Admin Command Aliases:&#10;   - &quot;a&quot;, &quot;staff&quot;, &quot;mod&quot;.&#10; - Create Command Aliases:&#10;   - &quot;new&quot;, &quot;n&quot;, &quot;start&quot;.&#10; - Help Command Aliases:&#10;   - &quot;?&quot;, &quot;h&quot;.&#10; - Info Command Aliases:&#10;   - &quot;about&quot;, &quot;i&quot;." />
     <MESSAGE value="Started on the Info Command...&#10;The main thing we need to do is create all of the methods so that we can check for the information.&#10;TODO METHODS:&#10;  - boolean isGuild Method.&#10;  - boolean isPlayer Method.&#10;  - void getPlayerBalance Method.&#10;  - void getGuildBalance Method.&#10;  - void getUserGuild Method.&#10;  - void getPreviousGuild Method.&#10;  - void getGuildLeader Method.&#10;  - void getGuildApprentices Method.&#10;  - void getGuildClaimedChunks Method.&#10;  - void getGuildMembers Method.&#10;  &#10;PICTURES FOR WHAT THE INFO COMMAND WILL LOOK LIKE: &#10; - https://gyazo.com/b6e6daabfef8578c38266b4962e57c07 (guild)&#10; - https://gyazo.com/b93b03b164793980309e6d4f76ae022e (player)" />
     <MESSAGE value="Did List Command:&#10; - The list command executes and starts off with getting a list of all of the guilds provided by the new getGuilds() method, then it sends a list of all of the guilds. *** Works on my test server.&#10; - Added List Command to GuildsCommand.java&#10; - Added Lang Config Option for the List Description.&#10; - Added the GET_GUILDS SqlQuery." />
-    <option name="LAST_COMMIT_MESSAGE" value="Did List Command:&#10; - The list command executes and starts off with getting a list of all of the guilds provided by the new getGuilds() method, then it sends a list of all of the guilds. *** Works on my test server.&#10; - Added List Command to GuildsCommand.java&#10; - Added Lang Config Option for the List Description.&#10; - Added the GET_GUILDS SqlQuery." />
+    <MESSAGE value="Created the List Command and did a few extra things&#10;******THERE IS A BUG IN THIS COMMIT******&#10;  SqlQueries.java:&#10;    - Removed the members column from the guilds table.&#10;    - Changed current_guild and guild_previous to guild and previous_guild.&#10;    - Created GET_USERS()&#10;    - Created GET_GUILD_MEMBERS()&#10;    - Created ADD_USER_TO_GUILD()&#10;  GuildManager.java:&#10;    - Created getPlayers().&#10;    - Created getGuildMembers().&#10;    - Created isGuild().&#10;    - Created isPlayer().&#10;    - Created addPlayerToGuild().&#10;  ListCommand.java:&#10;    - Fixed multiples of the same guild error by removing all of the guilds from the ArrayList.&#10;  InfoCommand.java:&#10;    - Added the checks to see if the argument is a player or guild.&#10;    - Created getMembers().&#10;  CreateCommand.java:&#10;    - Added the addPlayerToGuild method.&#10;  BUG IN THIS COMMIT:&#10;      04.08 17:25:21 [Server] INFO Jacksonnn issued server command: /g new test&#10;      04.08 17:25:21 [Server] ERROR null&#10;      04.08 17:25:21 [Server] INFO org.bukkit.command.CommandException: Unhandled exception executing command 'g' in plugin Guilds vBETA v1.0&#10;      04.08 17:25:21 [Server] INFO at org.bukkit.command.PluginCommand.execute(PluginCommand.java:46) ~[spigot-1.12.2_7_12.jar:git-Spigot-642f6d2-57ab4cf]&#10;      04.08 17:25:21 [Server] INFO at org.bukkit.command.SimpleCommandMap.dispatch(SimpleCommandMap.java:141) ~[spigot-1.12.2_7_12.jar:git-Spigot-642f6d2-57ab4cf]&#10;      04.08 17:25:21 [Server] INFO at org.bukkit.craftbukkit.v1_12_R1.CraftServer.dispatchCommand(CraftServer.java:648) ~[spigot-1.12.2_7_12.jar:git-Spigot-642f6d2-57ab4cf]&#10;      04.08 17:25:21 [Server] INFO at net.minecraft.server.v1_12_R1.PlayerConnection.handleCommand(PlayerConnection.java:1397) [spigot-1.12.2_7_12.jar:git-Spigot-642f6d2-57ab4cf]&#10;      04.08 17:25:21 [Server] INFO at net.minecraft.server.v1_12_R1.PlayerConnection.a(PlayerConnection.java:1232) [spigot-1.12.2_7_12.jar:git-Spigot-642f6d2-57ab4cf]&#10;      04.08 17:25:21 [Server] INFO at net.minecraft.server.v1_12_R1.PacketPlayInChat.a(PacketPlayInChat.java:45) [spigot-1.12.2_7_12.jar:git-Spigot-642f6d2-57ab4cf]&#10;      04.08 17:25:21 [Server] INFO at net.minecraft.server.v1_12_R1.PacketPlayInChat.a(PacketPlayInChat.java:1) [spigot-1.12.2_7_12.jar:git-Spigot-642f6d2-57ab4cf]&#10;      04.08 17:25:21 [Server] INFO at net.minecraft.server.v1_12_R1.PlayerConnectionUtils$1.run(SourceFile:13) [spigot-1.12.2_7_12.jar:git-Spigot-642f6d2-57ab4cf]&#10;      04.08 17:25:21 [Server] INFO at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:511) [?:1.8.0_161]&#10;      04.08 17:25:21 [Server] INFO at java.util.concurrent.FutureTask.run(FutureTask.java:266) [?:1.8.0_161]&#10;      04.08 17:25:21 [Server] INFO at net.minecraft.server.v1_12_R1.SystemUtils.a(SourceFile:46) [spigot-1.12.2_7_12.jar:git-Spigot-642f6d2-57ab4cf]&#10;      04.08 17:25:21 [Server] INFO at net.minecraft.server.v1_12_R1.MinecraftServer.D(MinecraftServer.java:748) [spigot-1.12.2_7_12.jar:git-Spigot-642f6d2-57ab4cf]&#10;      04.08 17:25:21 [Server] INFO at net.minecraft.server.v1_12_R1.DedicatedServer.D(DedicatedServer.java:406) [spigot-1.12.2_7_12.jar:git-Spigot-642f6d2-57ab4cf]&#10;      04.08 17:25:21 [Server] INFO at net.minecraft.server.v1_12_R1.MinecraftServer.C(MinecraftServer.java:679) [spigot-1.12.2_7_12.jar:git-Spigot-642f6d2-57ab4cf]&#10;      04.08 17:25:21 [Server] INFO at net.minecraft.server.v1_12_R1.MinecraftServer.run(MinecraftServer.java:577) [spigot-1.12.2_7_12.jar:git-Spigot-642f6d2-57ab4cf]&#10;      04.08 17:25:21 [Server] INFO at java.lang.Thread.run(Thread.java:748) [?:1.8.0_161]&#10;      04.08 17:25:21 [Server] INFO Caused by: java.lang.ArrayIndexOutOfBoundsException: 1&#10;      04.08 17:25:21 [Server] INFO at org.sqlite.core.CorePreparedStatement.batch(CorePreparedStatement.java:121) ~[spigot-1.12.2_7_12.jar:git-Spigot-642f6d2-57ab4cf]&#10;      04.08 17:25:21 [Server] INFO at org.sqlite.jdbc3.JDBC3PreparedStatement.setString(JDBC3PreparedStatement.java:421) ~[spigot-1.12.2_7_12.jar:git-Spigot-642f6d2-57ab4cf]&#10;      04.08 17:25:21 [Server] INFO at com.jacksonnn.guilds.guilds.GuildManager.addPlayerToGuild(GuildManager.java:226) ~[?:?]&#10;      04.08 17:25:21 [Server] INFO at com.jacksonnn.guilds.commands.subcommands.CreateCommand.execute(CreateCommand.java:76) ~[?:?]&#10;      04.08 17:25:21 [Server] INFO at com.jacksonnn.guilds.commands.GuildsCommand.onCommand(GuildsCommand.java:40) ~[?:?]&#10;      04.08 17:25:21 [Server] INFO at org.bukkit.command.PluginCommand.execute(PluginCommand.java:44) ~[spigot-1.12.2_7_12.jar:git-Spigot-642f6d2-57ab4cf]&#10;      04.08 17:25:21 [Server] INFO ... 15 more" />
+    <option name="LAST_COMMIT_MESSAGE" value="Created the List Command and did a few extra things&#10;******THERE IS A BUG IN THIS COMMIT******&#10;  SqlQueries.java:&#10;    - Removed the members column from the guilds table.&#10;    - Changed current_guild and guild_previous to guild and previous_guild.&#10;    - Created GET_USERS()&#10;    - Created GET_GUILD_MEMBERS()&#10;    - Created ADD_USER_TO_GUILD()&#10;  GuildManager.java:&#10;    - Created getPlayers().&#10;    - Created getGuildMembers().&#10;    - Created isGuild().&#10;    - Created isPlayer().&#10;    - Created addPlayerToGuild().&#10;  ListCommand.java:&#10;    - Fixed multiples of the same guild error by removing all of the guilds from the ArrayList.&#10;  InfoCommand.java:&#10;    - Added the checks to see if the argument is a player or guild.&#10;    - Created getMembers().&#10;  CreateCommand.java:&#10;    - Added the addPlayerToGuild method.&#10;  BUG IN THIS COMMIT:&#10;      04.08 17:25:21 [Server] INFO Jacksonnn issued server command: /g new test&#10;      04.08 17:25:21 [Server] ERROR null&#10;      04.08 17:25:21 [Server] INFO org.bukkit.command.CommandException: Unhandled exception executing command 'g' in plugin Guilds vBETA v1.0&#10;      04.08 17:25:21 [Server] INFO at org.bukkit.command.PluginCommand.execute(PluginCommand.java:46) ~[spigot-1.12.2_7_12.jar:git-Spigot-642f6d2-57ab4cf]&#10;      04.08 17:25:21 [Server] INFO at org.bukkit.command.SimpleCommandMap.dispatch(SimpleCommandMap.java:141) ~[spigot-1.12.2_7_12.jar:git-Spigot-642f6d2-57ab4cf]&#10;      04.08 17:25:21 [Server] INFO at org.bukkit.craftbukkit.v1_12_R1.CraftServer.dispatchCommand(CraftServer.java:648) ~[spigot-1.12.2_7_12.jar:git-Spigot-642f6d2-57ab4cf]&#10;      04.08 17:25:21 [Server] INFO at net.minecraft.server.v1_12_R1.PlayerConnection.handleCommand(PlayerConnection.java:1397) [spigot-1.12.2_7_12.jar:git-Spigot-642f6d2-57ab4cf]&#10;      04.08 17:25:21 [Server] INFO at net.minecraft.server.v1_12_R1.PlayerConnection.a(PlayerConnection.java:1232) [spigot-1.12.2_7_12.jar:git-Spigot-642f6d2-57ab4cf]&#10;      04.08 17:25:21 [Server] INFO at net.minecraft.server.v1_12_R1.PacketPlayInChat.a(PacketPlayInChat.java:45) [spigot-1.12.2_7_12.jar:git-Spigot-642f6d2-57ab4cf]&#10;      04.08 17:25:21 [Server] INFO at net.minecraft.server.v1_12_R1.PacketPlayInChat.a(PacketPlayInChat.java:1) [spigot-1.12.2_7_12.jar:git-Spigot-642f6d2-57ab4cf]&#10;      04.08 17:25:21 [Server] INFO at net.minecraft.server.v1_12_R1.PlayerConnectionUtils$1.run(SourceFile:13) [spigot-1.12.2_7_12.jar:git-Spigot-642f6d2-57ab4cf]&#10;      04.08 17:25:21 [Server] INFO at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:511) [?:1.8.0_161]&#10;      04.08 17:25:21 [Server] INFO at java.util.concurrent.FutureTask.run(FutureTask.java:266) [?:1.8.0_161]&#10;      04.08 17:25:21 [Server] INFO at net.minecraft.server.v1_12_R1.SystemUtils.a(SourceFile:46) [spigot-1.12.2_7_12.jar:git-Spigot-642f6d2-57ab4cf]&#10;      04.08 17:25:21 [Server] INFO at net.minecraft.server.v1_12_R1.MinecraftServer.D(MinecraftServer.java:748) [spigot-1.12.2_7_12.jar:git-Spigot-642f6d2-57ab4cf]&#10;      04.08 17:25:21 [Server] INFO at net.minecraft.server.v1_12_R1.DedicatedServer.D(DedicatedServer.java:406) [spigot-1.12.2_7_12.jar:git-Spigot-642f6d2-57ab4cf]&#10;      04.08 17:25:21 [Server] INFO at net.minecraft.server.v1_12_R1.MinecraftServer.C(MinecraftServer.java:679) [spigot-1.12.2_7_12.jar:git-Spigot-642f6d2-57ab4cf]&#10;      04.08 17:25:21 [Server] INFO at net.minecraft.server.v1_12_R1.MinecraftServer.run(MinecraftServer.java:577) [spigot-1.12.2_7_12.jar:git-Spigot-642f6d2-57ab4cf]&#10;      04.08 17:25:21 [Server] INFO at java.lang.Thread.run(Thread.java:748) [?:1.8.0_161]&#10;      04.08 17:25:21 [Server] INFO Caused by: java.lang.ArrayIndexOutOfBoundsException: 1&#10;      04.08 17:25:21 [Server] INFO at org.sqlite.core.CorePreparedStatement.batch(CorePreparedStatement.java:121) ~[spigot-1.12.2_7_12.jar:git-Spigot-642f6d2-57ab4cf]&#10;      04.08 17:25:21 [Server] INFO at org.sqlite.jdbc3.JDBC3PreparedStatement.setString(JDBC3PreparedStatement.java:421) ~[spigot-1.12.2_7_12.jar:git-Spigot-642f6d2-57ab4cf]&#10;      04.08 17:25:21 [Server] INFO at com.jacksonnn.guilds.guilds.GuildManager.addPlayerToGuild(GuildManager.java:226) ~[?:?]&#10;      04.08 17:25:21 [Server] INFO at com.jacksonnn.guilds.commands.subcommands.CreateCommand.execute(CreateCommand.java:76) ~[?:?]&#10;      04.08 17:25:21 [Server] INFO at com.jacksonnn.guilds.commands.GuildsCommand.onCommand(GuildsCommand.java:40) ~[?:?]&#10;      04.08 17:25:21 [Server] INFO at org.bukkit.command.PluginCommand.execute(PluginCommand.java:44) ~[spigot-1.12.2_7_12.jar:git-Spigot-642f6d2-57ab4cf]&#10;      04.08 17:25:21 [Server] INFO ... 15 more" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -743,24 +733,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/jacksonnn/guilds/commands/subcommands/ListCommand.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/jacksonnn/guilds/commands/subcommands/CreateCommand.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="573">
-          <caret line="52" column="65" selection-start-line="52" selection-start-column="65" selection-end-line="52" selection-end-column="65" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/jacksonnn/guilds/commands/subcommands/InfoCommand.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="423">
-          <caret line="94" column="55" selection-start-line="94" selection-start-column="55" selection-end-line="94" selection-end-column="55" />
-          <folding>
-            <element signature="e#0#4175#0" expanded="true" />
-            <element signature="imports" expanded="true" />
-          </folding>
+        <state relative-caret-position="259">
+          <caret line="55" column="9" lean-forward="true" selection-start-line="55" selection-start-column="9" selection-end-line="55" selection-end-column="9" />
         </state>
       </provider>
     </entry>
@@ -778,17 +754,31 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/jacksonnn/guilds/guilds/GuildManager.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/jacksonnn/guilds/commands/subcommands/ListCommand.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="316">
-          <caret line="214" column="10" selection-start-line="214" selection-start-column="4" selection-end-line="214" selection-end-column="10" />
+        <state relative-caret-position="558">
+          <caret line="53" column="5" lean-forward="true" selection-start-line="42" selection-start-column="4" selection-end-line="53" selection-end-column="5" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/jacksonnn/guilds/commands/subcommands/CreateCommand.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/jacksonnn/guilds/commands/subcommands/InfoCommand.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="259">
-          <caret line="55" column="9" lean-forward="true" selection-start-line="55" selection-start-column="9" selection-end-line="55" selection-end-column="9" />
+        <state relative-caret-position="483">
+          <caret line="102" column="7" lean-forward="true" selection-start-line="102" selection-start-column="7" selection-end-line="102" selection-end-column="7" />
+          <folding>
+            <element signature="e#0#4175#0" expanded="true" />
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/jacksonnn/guilds/guilds/GuildManager.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="143">
+          <caret line="220" column="42" selection-start-line="220" selection-start-column="42" selection-end-line="220" selection-end-column="42" />
         </state>
       </provider>
     </entry>
