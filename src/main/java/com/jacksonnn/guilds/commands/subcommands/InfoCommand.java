@@ -1,7 +1,5 @@
 /*
     TODO METHODS:
-        - boolean isGuild Method.
-        - boolean isPlayer Method.
         - void getPlayerBalance Method.
         - void getGuildBalance Method.
         - void getUserGuild Method.
@@ -9,7 +7,6 @@
         - void getGuildLeader Method.
         - void getGuildApprentices Method.
         - void getGuildClaimedChunks Method.
-        - void getGuildMembers Method.
 */
 package com.jacksonnn.guilds.commands.subcommands;
 
@@ -18,6 +15,8 @@ import com.jacksonnn.guilds.GuildsMain;
 import com.jacksonnn.guilds.commands.SubCommand;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.UUID;
+import java.util.stream.Collectors;
 
 import org.bukkit.Bukkit;
 import org.bukkit.ChatColor;
@@ -58,14 +57,13 @@ public class InfoCommand implements SubCommand {
 
   @Override
   public void execute(CommandSender sender, List<String> args) {
-      /* if(arg.get(0).isGuild) {
-            info(sender, args, guild);
-         } else if (arg.get(0).isPlayer) {
-            info(sender, args, player);
+      if(plugin.getGuildManager().isGuild(args.get(0))) {
+            info(sender, args, "guild");
+         } else if (plugin.getGuildManager().isPlayer(args.get(0))) {
+            info(sender, args, "player");
          } else {
-            GuildUtils.sendMessage(sender, GuildUtils.Prefix.prefixError, "The argument you entered was not a guild nor a player. Please enter one of those.
-       */
-
+            GuildUtils.sendMessage(sender, GuildUtils.Prefix.prefixError, "The argument you entered was not a guild nor a player. Please enter one of those.");
+      }
   }
 
 
@@ -85,7 +83,27 @@ public class InfoCommand implements SubCommand {
           sender.sendMessage(ChatColor.YELLOW + "Leader: " + ChatColor.WHITE /* + getGuildLeaderMethod() */ + ChatColor.YELLOW + "|| Apprentices: " + ChatColor.WHITE /* + getGuildApprenticesMethod()*/);
           sender.sendMessage(ChatColor.YELLOW + "Guild Start Date: " + ChatColor.WHITE /* + getGuildStartDateMethod() */);
           sender.sendMessage(ChatColor.YELLOW + "Bank: " + ChatColor.WHITE /* + getGuildBankMethod() */ + ChatColor.YELLOW + "|| Chunks Claimed: " + ChatColor.WHITE /* +getGuildChunksClaimedMethod()*/);
-          sender.sendMessage(ChatColor.YELLOW + "Members: " + ChatColor.WHITE /* + getGuildMembersMethod()*/);
-        }
-    }
+          getMembers(sender, guild);
+      }
+  }
+
+  public void getMembers(CommandSender sender, String guild) {
+      List<String> guildMembers = new ArrayList<>();
+      String playerName;
+
+      for (String member : plugin.getGuildManager().getGuildMembers(guild)) {
+          Player player = Bukkit.getServer().getPlayer(member);
+
+          if (player.isOnline()) {
+              playerName = Bukkit.getPlayer(UUID.fromString(member)).getName();
+          } else {
+              playerName = Bukkit.getOfflinePlayer(UUID.fromString(member)).getName();
+          }
+          guildMembers.add(playerName);
+      }
+
+      String formatted = guildMembers.stream().collect(Collectors.joining(", "));
+
+      sender.sendMessage(ChatColor.YELLOW + "Members: " + ChatColor.WHITE + formatted);
+  }
 }

@@ -49,5 +49,7 @@ public class ListCommand implements SubCommand {
         for (String g : guilds) {
             sender.sendMessage(ChatColor.YELLOW + g);
         }
+
+        guilds.removeAll(guildsMain.getGuildManager().getGuilds());
     }
 }

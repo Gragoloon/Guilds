@@ -5,7 +5,6 @@ public enum SqlQueries {
       + "`id` INT NOT NULL AUTO_INCREMENT,"
       + "`leader` TEXT NOT NULL,"
       + "`claimed` TEXT,"
-      + "`members` TEXT,"
       + "`balance` INT NOT NULL,"
       + "`mods` TEXT,"
       + "`allies` TEXT,"
@@ -15,7 +14,6 @@ public enum SqlQueries {
       + "id integer PRIMARY KEY AUTOINCREMENT,"
       + "leader text,"
       + "claimed text,"
-      + "members text,"
       + "balance integer,"
       + "mods text,"
       + "allies text,"
@@ -25,15 +23,15 @@ public enum SqlQueries {
   CREATE_USERS("CREATE TABLE IF NOT EXISTS `users` ("
       + "`id` INT NOT NULL AUTO_INCREMENT,"
       + "`uuid` TEXT NOT NULL,"
-      + "`current_guild` TEXT,"
-      + "`guilds_previous` TEXT,"
+      + "`guild` TEXT,"
+      + "`previous_guilds` TEXT,"
       + "`rank` TEXT,"
       + "PRIMARY KEY (`id`)"
       + ");", "CREATE TABLE IF NOT EXISTS users ("
       + "id integer PRIMARY KEY AUTOINCREMENT,"
       + "uuid text,"
-      + "current_guild text,"
-      + "guilds_previous text,"
+      + "guild text,"
+      + "previous_guilds text,"
       + "rank text"
       + ");"),
 
@@ -54,7 +52,19 @@ public enum SqlQueries {
 
   GET_GUILDS(
       "SELECT * FROM `guilds`",
-      "SELECT * FROM guilds");
+      "SELECT * FROM guilds"),
+
+  GET_USERS(
+          "SELECT * FROM `users`",
+          "SELECT * FROM users"),
+
+  GET_GUILD_MEMBERS(
+      "SELECT * FROM `users` WHERE guild=?",
+      "SELECT * FROM users WHERE guild=?"),
+
+  ADD_USER_TO_GUILD(
+          "UPDATE `users` SET guild=? WHERE uuid=?",
+          "UPDATE users SET guild=? WHERE uuid=?");
 
   private String mysqlQuery;
   private String sqliteQuery;

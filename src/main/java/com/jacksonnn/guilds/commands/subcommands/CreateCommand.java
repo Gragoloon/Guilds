@@ -59,6 +59,7 @@ public class CreateCommand implements SubCommand {
           return;
         }
         guildsMain.getGuildManager().createGuild(player.getUniqueId(), name);
+        guildsMain.getGuildManager().addPlayerToGuild(name, player.getName());
           GuildUtils.sendMessage(sender, GuildUtils.Prefix.prefixSuccess, GuildUtils.color(guildsMain.getConfigManager().getLanguageConfig().get().getString("Success.CreatedGuild.Other")));
         return;
       }
@@ -72,6 +73,7 @@ public class CreateCommand implements SubCommand {
       String name = GuildUtils.getMessage(args, 0);
 
       guildsMain.getGuildManager().createGuild(player.getUniqueId(), name);
+      guildsMain.getGuildManager().addPlayerToGuild(name, player.getName());
       GuildUtils.sendMessage(player, GuildUtils.Prefix.prefixSuccess, GuildUtils.color(guildsMain.getConfigManager().getLanguageConfig().get().getString("Success.CreatedGuild.Player")));
     } else {
         GuildUtils.sendMessage(sender, GuildUtils.Prefix.prefixError, GuildUtils.color(guildsMain.getConfigManager().getLanguageConfig().get().getString("Error.MustBePlayer")));
